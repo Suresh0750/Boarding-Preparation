@@ -43,4 +43,21 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
         res.write() is a method provided by the core Node.js and res.write() is a lower-level method used to send data in chunks to the client . 
 
         It does not end the response by itself, allowing you to send multiple chunks of data before closing the connection with res.end().
-        
+
+# What is Node.js, and how does it differ from traditional server-side technologies?
+
+
+    Node js is open-source, cross-platform runtime environment that allows developers to execute Javascript code on the server side. It build on Chrome's V8 Engine
+
+    ➡ Key features :
+     Build on Chrome's V8 Engine
+     Non-blocking, Asynchronous Architecture
+     Single-Threaded Event loop
+
+    ➡ how does it differ from traditional server-side technologies?
+
+    Node JS 👍
+        Node.js: Uses a non-blocking, event-driven model, which allows it to handle multiple requests at once without waiting for operations like reading a file or querying a database to complete. This makes it highly efficient for handling I/O-bound tasks.
+
+     Traditional Server-Side Technologies (e.g., PHP, ASP.NET, Java Servlets) 👍
+        Typically use a blocking, multi-threaded approach. Each request is handled by a separate thread. When a thread is waiting for an I/O operation to complete, it cannot handle other requests, leading to higher resource consumption and potential scalability issues.
