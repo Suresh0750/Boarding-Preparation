@@ -28,3 +28,16 @@
                                             })
 
     
+## lookup
+
+    Performs a left outer join to a collection in the same database to filter in documents from the "joined" collection for processing. The $lookup stage adds a new array field to each input document. The new array field contains the matching documents from the "joined" collection.
+
+    {
+        $lookup:
+            {
+            from: <collection to join>,
+            localField: <field from the input documents>,
+            foreignField: <field from the documents of the "from" collection>,
+            as: <output array field>
+            }
+    }
