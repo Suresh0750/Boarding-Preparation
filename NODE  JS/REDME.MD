@@ -84,3 +84,26 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
     Before node js developer using Apache Http server which is blocking server that's why Ryan create node js which is non blocking server and It handle multipe request withe less threads
 
     Isaac the developer who created the npm.
+
+# Node js is c++  code ?
+
+    basically javascript engine which is v8 is written by c++;
+
+    node js using c++ programing lanuage which is used to execute the javascript code.
+
+# what is v8?
+
+    V8 is Google's open source high-performance Javascript and webassembly engine, written by c++. It's used in Chrome and in Node js. among others. It implements Ecmascript and webassemply. V8 can be embedded into any c++ application. That means node js is a c++ application.
+
+# What is Ecmascript ?
+
+    ECMAScript is a standard for scripting language, includes javascript, action script. 
+
+    standered means nothing we write js code which is like "var a = 10" here we follow some standared for writting a code that is Ecmascript.
+
+#  Js Engine
+
+    - V8 - Google
+    -Spider Monkey - FireFox
+    - chakra - Microsoft Edge Legacy, Internet Explorer
+    - JavaScriptCore - Safari
