@@ -61,3 +61,26 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
 
      Traditional Server-Side Technologies (e.g., PHP, ASP.NET, Java Servlets) 👍
         Typically use a blocking, multi-threaded approach. Each request is handled by a separate thread. When a thread is waiting for an I/O operation to complete, it cannot handle other requests, leading to higher resource consumption and potential scalability issues.
+
+
+
+ 
+
+## namaste node js
+
+# what is node js
+
+    Node js is a cross-platform, open-sorce, javascript run time environment that can run in Windows, Linux, Unix, maxOS and more. Node js runs on the V8 javascript engine, and execuates JavaScript code outside a web browser.
+
+    Node js has an event-driven-architecture capable of asynchronous I/O (non-blocking input output)
+
+
+// info
+    
+    node js comes 2009 made by Ryan Dahl
+
+## why Ryan Dahl create Node js?
+
+    Before node js developer using Apache Http server which is blocking server that's why Ryan create node js which is non blocking server and It handle multipe request withe less threads
+
+    Isaac the developer who created the npm.
