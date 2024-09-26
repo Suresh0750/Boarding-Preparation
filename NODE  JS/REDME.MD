@@ -90,6 +90,7 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
     basically javascript engine which is v8 is written by c++;
 
     node js using c++ programing lanuage which is used to execute the javascript code.
+    node js is a c++ application.
 
 # what is v8?
 
@@ -107,3 +108,43 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
     -Spider Monkey - FireFox
     - chakra - Microsoft Edge Legacy, Internet Explorer
     - JavaScriptCore - Safari
+
+
+// # EPISODE - 3
+
+# what is REPL ?
+
+    Read Evaluate print Loop. which is the format for exacute the javascript in node. 
+
+   here we can run node in cmd or termianl command in node then we can write js code, our v8 engine is took that code and execute well which is following the REPL format.
+
+# global
+
+    in browser 'window and this' global object but here global is the global object.  setTimout and setInterval and clearInterval everything comes under the global object . global is the super power which is providing the node js not v8 engine. 
+
+    globalThis which refer the global object node js and js also.
+    console.log(globalThis===global)  // * true
+
+# about this
+
+    if you put console.log(this) here we got {} object . 
+
+
+
+// * Episode_4
+
+# what is module 
+
+    In Node.js, a module is a reusable collection of JavaScript functions and objects that can be used by other applications.
+    module protecte there function, variable from leaking
+
+# types of modules 
+
+    1) common js modules (cjs)  
+    2) ES modules (mjs,esm)
+
+    if the package.json type: common js means we should use require for require the module
+    if the package.json type: module means we should use import and export.
+
+
+    
