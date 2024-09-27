@@ -41,3 +41,7 @@
             as: <output array field>
             }
     }
+
+## rename operator
+
+db.collection.update({},{$rename:{oldName:"rename"}})
