@@ -146,5 +146,52 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
     if the package.json type: common js means we should use require for require the module
     if the package.json type: module means we should use import and export.
 
+## behind the scence of module 
 
+    require('/file path')
+
+    // * All the code of the module is wrapped inside a function. that means every file's like module if we want to use that file inside the code to another file we have to use module.exports. Here every module create private place for avoiding the memory leaks. 
+    // * That function is immediate involke's function 
+    // * node js before gave the all code of the module it wrapped all code into IIFE then it give to v8 engine.
+
+
+
+## important question 
+
+    How are variables  & functions private in different module?
+
+    ----> IIFE & require(statement)
+    (wrapped code)
+
+    const {logincontroll} = require('../allcontrollers)
+
+    * here is the require statemente take the all code and wrapped into the IIFE that't behind the scene of require statement.
+
+## working of require statement 
+
+    1 ) Resolving the module 
+
+        first of all it will check the module and module path
+        ./  locat path
+        ./ .json
+        ./ node:module ---> inner module
+
+    2) Loading the module
+        |
+        |
+        ----> File content or context ia loaded according to the file type.
+
+        This means we require another file our project another folder it will load that content . sometime we require third party module. 
+    
+    3 ) Wraps inside the  IIFE 
+
+        it will load that file content and wrapped into IIFE.  
+
+    4 ) Evaluation 
+
+            it will provide module.export (this module.export passed as parameter to immediate invoked function)
+
+    5 ) caching 👍
+
+            caching is the importent concept of node js take an example of xyz.js file I require inside the many files  whenever the file is load nodejs taking the all code and caching itself the it won't load again alread exiting files. that's why nodejs very fast.
     

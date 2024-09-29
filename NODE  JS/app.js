@@ -24,3 +24,12 @@ k = 10
 console.log(k)
 
 console.log(globalThis)
+
+
+
+function ab(){
+    var  b = 55   // * if we declare any veriable inside the function it will store the private place we can't access the outside.
+}
+
+ab()
+console.log(b)
