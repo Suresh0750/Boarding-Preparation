@@ -136,7 +136,7 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
 # what is module 
 
     In Node.js, a module is a reusable collection of JavaScript functions and objects that can be used by other applications.
-    module protecte there function, variable from leaking
+    module prodect there function, variable from leaking
 
 # types of modules 
 
@@ -195,3 +195,29 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
 
             caching is the importent concept of node js take an example of xyz.js file I require inside the many files  whenever the file is load nodejs taking the all code and caching itself the it won't load again alread exiting files. that's why nodejs very fast.
     
+
+ # require 
+    
+
+
+let m = {
+    export : {
+        
+    }
+}
+
+let {calculate} = (function (module){
+    function calculate(){
+        console.log('hellow')
+    }
+    return module.export = {calculate}
+}(m))
+
+calculate()
+
+// ****************
+
+
+# access the filename
+
+console.log(__filename)

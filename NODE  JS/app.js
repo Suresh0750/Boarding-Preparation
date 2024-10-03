@@ -33,3 +33,7 @@ function ab(){
 
 ab()
 console.log(b)
+
+// console.log(__filename)
+
+// console.log(globalThis)
