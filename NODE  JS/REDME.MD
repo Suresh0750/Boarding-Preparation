@@ -221,3 +221,8 @@ calculate()
 # access the filename
 
 console.log(__filename)
+
+
+# threads
+
+    In our operating system theres has multiple processor inside the processore one things is there is called threads. threads is nothing but is like a container where our application(c++) runs.
