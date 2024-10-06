@@ -1,5 +1,5 @@
 
-
+const https = require('https')
 
 // let x = 10
 
@@ -12,4 +12,8 @@ console.log(module.exports)
 console.log(module)
 
 
-console.log(require)
+// console.log(require)
+
+console.log(https)
+
+

@@ -226,3 +226,18 @@ console.log(__filename)
 # threads
 
     In our operating system theres has multiple processor inside the processore one things is there is called threads. threads is nothing but is like a container where our application(c++) runs.
+
+
+# developer shouldn't use synchrounse method
+
+    fs.readSync()
+    crypto.pbkddf2()
+
+
+# Truth about setTimout
+    
+    every asynchronous function go to libuv once the call stack main thread is empty then the setTimeout function is start to execute that means every sync code is executed in v8 engine then setTimeout is start even the setTimeout 0 millisecond also. it's also working in libuv. libuv only take and handle every async function.
+
+    setTimeout(()=>{
+        console.log('call stack empty I will work')
+    },0)
