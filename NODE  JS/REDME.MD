@@ -241,3 +241,40 @@ console.log(__filename)
     setTimeout(()=>{
         console.log('call stack empty I will work')
     },0)
+
+# Tick 
+
+    In event loop one cycle iteration is known as one Tick.
+
+# thread pool
+
+    defaultly libuv have 4 thread pool for handle the asynchrounous function but we can reasign the number of thread pools . process.env.UV_THREADPOOL_SIZE = 10
+
+
+
+# episode -10
+
+# fds - file descriptor and also know as socket descriptor & scallable I/O event notification mechanisam and Event driven mechanisam.
+      
+        epoll - (linux)  - epoll is a linux kernal system
+        kqueue - (MacOs) - kqueue is a MacOs kernal system
+
+        File descriptor used to handle the I/O requests which means suppose if we want to read or write any file for that node js should talk to kernel . basically kernal is used to manage I/O operation from the *software* translate into system which means electronic parts.
+
+        file descriptor is also know as socket descriptor. it has diff  i not sure about it.
+
+        one request handled by one file descriptor but if 1000 request came to node js, nodejs won't use 1000 filedescriptor insted of it is handle by kernal if system is linux means epoll kernal provide a epoll descriptor. epoll descriptor is collection of file descriptor.
+
+        epoll descriptor handle all the request and scallable I/O event notification mechanisam is monitoring the process then it gave to output to the libuv. It will wait the callback queue. then event loop process is start.
+
+        event driven mechanisam is architecture of how the event it happens in the kernel level . after the process the scallable I/O event notification mechanism gave output to the libuv. Basically is a total process of how event handle by libuv and kernel system.
+
+        scallable I/O event notification mechanisam is used event emiter and  listen event notification mechanisam talk to libuv.
+
+        epoll operates O(1)
+
+
+
+# stream and buffer
+
+     if we access the any data like if I put google.com in chrom it will go to the server and fetch some html or image format data basically it won't give whole things it will send chunk format data.

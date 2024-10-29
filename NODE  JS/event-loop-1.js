@@ -6,7 +6,6 @@ setImmediate(()=>console.log("setImmediate"));
 let text ;
 fs.readFile("./newFile.txt","utf8",(err,data)=>{
     console.log("Fs Reading CB")
-    
 })
 
 
