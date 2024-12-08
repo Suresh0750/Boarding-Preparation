@@ -28,14 +28,34 @@ let arr = [1,2,3,-3,-3,8,-5,-2,100]
 
 //  * 07 | 12 | 24
 
-function bubble(arr){
-    let loop ;
+// function bubble(arr){
+//     let loop ;
+//     do{
+//         loop = false
+//         let i = 0
+//         while(i<arr.length){
+//             if(arr[i]>arr[i+1]){
+//                 [arr[i],arr[i+1]] = [arr[i+1],arr[i]]
+//                 loop = true
+//             }
+//             i++
+//         }
+//     }while(loop)
+//     return arr
+// }
+
+
+
+//  * 08 | 12 | 24
+
+function bubleSort(arr){
+    let loop;
     do{
         loop = false
-        let i = 0
+        let i =0
         while(i<arr.length){
             if(arr[i]>arr[i+1]){
-                [arr[i],arr[i+1]] = [arr[i+1],arr[i]]
+                [arr[i],arr[i+1]] =[arr[i+1],arr[i]]
                 loop = true
             }
             i++
@@ -43,3 +63,5 @@ function bubble(arr){
     }while(loop)
     return arr
 }
+
+console.log(bubleSort(arr))
