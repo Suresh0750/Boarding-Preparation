@@ -289,16 +289,16 @@
 // console.log("age:", hashTable.getLinearProbing("age")); // 25
 // console.log("city:", hashTable.getLinearProbing("city")); // Wonderland
 
-// // // Quadratic Probing
-// // const hashTable2 = new HashTable(7);
-// // console.log("\nUsing Quadratic Probing:");
-// // hashTable2.setQuadraticProbing("name", "Alice");
-// // hashTable2.setQuadraticProbing("age", 25);
-// // hashTable2.setQuadraticProbing("city", "Wonderland");
-// // hashTable2.setQuadraticProbing("email", "alice@example.com");
-// // hashTable2.display();
+// // Quadratic Probing
+// const hashTable2 = new HashTable(7);
+// console.log("\nUsing Quadratic Probing:");
+// hashTable2.setQuadraticProbing("name", "Alice");
+// hashTable2.setQuadraticProbing("age", 25);
+// hashTable2.setQuadraticProbing("city", "Wonderland");
+// hashTable2.setQuadraticProbing("email", "alice@example.com");
+// hashTable2.display();
 
-// // console.log("Get using Quadratic Probing:");
-// // console.log("name:", hashTable2.getQuadraticProbing("name")); // Alice
-// // console.log("age:", hashTable2.getQuadraticProbing("age")); // 25
-// // console.log("city:", hashTable2.getQuadraticProbing("city")); // Wonderland
+// console.log("Get using Quadratic Probing:");
+// console.log("name:", hashTable2.getQuadraticProbing("name")); // Alice
+// console.log("age:", hashTable2.getQuadraticProbing("age")); // 25
+// console.log("city:", hashTable2.getQuadraticProbing("city")); // Wonderland
