@@ -149,3 +149,49 @@ Currently, two official plugins are available:
     Complex State Management
     Learning Curve for Beginners
     Too Much Boilerplate
+
+# Arrow function
+
+    Arrow function are more concise way to write a function expression  in javascript.
+
+# map
+
+    In JavaScript, the map() method is used to transform each element of an array and return a new array.
+
+# Destructuring 
+
+    Destructuring in JavaScript is a feature introduced in ES6 that allows you to extract values from arrays or properties from objects and assign them to variables in a concise way.
+
+# filter
+
+    The filter() method in JavaScript is used to create a new array containing elements that satisfy a specific condition. It does not modify the original array.
+
+# reduce
+  
+    In JavaScript, the reduce() method itself accepts 2 parameters, and its callback function can have 4 parameters.
+
+
+# Import/Export
+
+
+    asynchronus behavior
+    strict mood
+    module js
+
+# lifecycle methods
+
+    lifecycle methods are hooks that run at various stages of a component's life, such as when it's created, updated, or destroyed.
+
+# Error Boundary
+
+    An Error Boundary is a special React component that catches JavaScript errors in its child components during rendering, in lifecycle methods, and in constructors. Instead of crashing the app when an error occurs, it displays a fallback UI (like an error message).
+
+# pointer events 
+
+    Pointer Events are a part of the Pointer Events API in web development, designed to handle user interactions across different devices such as a mouse, touchscreens, and stylus input. They provide a unified way to manage various types of input events, making it easier to create responsive and accessible applications.
+
+
+# useContext
+
+    In React, useContext is a Hook that allows you to access and share values (such as state, functions, or any data) across different components without having to pass props down manually through each component in the component tree. 
+    It is commonly used with React Context to enable global state management.
