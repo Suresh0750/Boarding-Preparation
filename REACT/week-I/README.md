@@ -91,7 +91,7 @@ Currently, two official plugins are available:
 
 # controlled component and uncontrolled component
 
-     In a controlled component, the value of the input field is controlled by React state. It provides better control and flexibility for handling form data, validation, and changes.
+    In a controlled component, the value of the input field is controlled by React state. It provides better control and flexibility for handling form data, validation, and changes.
 
     In an uncontrolled component, the input field maintains its value internally, and React does not control it. Instead, you use refs to access the value when needed. It is simpler but less flexible than controlled components.
 

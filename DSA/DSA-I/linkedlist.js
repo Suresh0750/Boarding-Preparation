@@ -84,7 +84,6 @@ class singleLinkedList{
         }else if(index==0){
             remove = this.head
             this.head = this.head.next
-            
         }else{
             let curr = this.head
             for(let i=0;i<index-1;i++){

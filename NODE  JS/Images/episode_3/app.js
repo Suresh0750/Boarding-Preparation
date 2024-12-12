@@ -19,3 +19,5 @@ console.log(globalThis==global)  // * globalThis also refer the global object
 
 
 
+const {crypto} = globalThis
+console.log(crypto)

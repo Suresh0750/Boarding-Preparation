@@ -1,5 +1,5 @@
 Synchronous in JavaScript.
-As its base JavaScript language is synchronous. Synchronous means the code runs in a particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution.
+As its base JavaScript language is synchronous. Synchronous means the code runs in a particular sequence of instructions given in the programe. Each instruction waits for the previous instruction to complete its execution.
 
 
 Synchronous and Asynchronous 👍

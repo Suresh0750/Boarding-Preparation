@@ -43,7 +43,7 @@ class Queue{
     isPeak(){
         return this.isEmpty() ? null : this.frond.value
     }
-    getSize(){
+    getSize(){  
         return this.size
     }
 }

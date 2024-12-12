@@ -278,3 +278,37 @@ console.log(__filename)
 # stream and buffer
 
      if we access the any data like if I put google.com in chrom it will go to the server and fetch some html or image format data basically it won't give whole things it will send chunk format data.
+
+
+
+# garbage collection works:
+
+ * V8's garbage collection works in two main steps:
+
+        Identifying unreachable (non-referenced) data.
+        Reclaiming memory occupied by unreachable data.
+
+ * V8 uses the Generational Garbage Collection technique, which divides objects into two generations:
+
+        Young Generation (Short-lived objects)
+        Old Generation (Long-lived objects)
+    
+    1. Phases of Garbage Collection
+        There are two main algorithms for handling these generations:
+
+    * a. Young Generation: Scavenge Algorithm
+        V8 divides the Young Generation into two spaces:
+        From-space: Active space where new objects are allocated.
+        To-space: Temporary space to move live (reachable) objects.
+
+    * b. Old Generation: Mark-and-Sweep Algorithm
+        Objects that survive multiple Scavenge collections are moved to the Old Generation. V8 applies the Mark-and-Sweep algorithm here.
+
+        Steps:
+
+    * Mark Phase:
+            V8 traverses the object graph starting from root references (global objects, stack, and heap references).  // * it would DFS for traversal
+            Any reachable (referenced) object is marked as alive.
+    * Sweep Phase:
+            Non-marked (unreachable) objects are considered garbage.
+            Their memory is reclaimed.  

@@ -28,3 +28,6 @@ Key Characteristics:
 
 
     // * multi thread can't access dom so they can't do dom manipulation.
+
+
+
