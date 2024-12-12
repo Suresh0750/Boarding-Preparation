@@ -121,7 +121,7 @@ class minHeap{
 const hp = new minHeap()
 
 
-hp.insert(5)
+hp.insert(5)    
 hp.insert(4)
 hp.insert(10)
 hp.insert(1)
