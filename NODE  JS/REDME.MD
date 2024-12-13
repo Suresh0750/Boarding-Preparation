@@ -273,6 +273,52 @@ console.log(__filename)
 
         epoll operates O(1)
 
+# process 
+
+  * what 
+        A process is an instance of a program in execution, created and managed by the operating system.
+        In the context of an operating system, the process is the execution environment where your code runs.
+        Main Process: Handles incoming requests and dispatches tasks.
+        Child Processes: Perform tasks like file uploads, large computations, or running Python scripts.
+        Inter-Process Communication: The main process communicates with child processes using message-passing (IPC-Inter-Process Communication ).
+            
+
+# How to achieve the paralisam in node js?.
+  * A single process may not fully utilize multi-core CPUs. Running multiple processes helps achieve parallelism.
+  
+# Main Process: 
+
+  * The main process is where your primary Node.js application runs, and it listens for incoming requests, interacts with databases, and schedules asynchronous operations.
+  
+# child process 
+    These are separate processes created by the main process to perform tasks that might be too computationally heavy or resource-intensive for the main thread, like handling large file uploads, running complex computations, or executing scripts (such as Python or shell scripts). Child processes allow you to offload tasks from the main event loop, improving performance.
+
+  * spwan() 
+    * Creates a child process to run external commands or executables (not necessarily Node.js code).
+    * Can be used to run shell commands, external scripts, or programs like ls, git, etc.
+    * It doesn't automatically execute Node.js code; instead, it runs the specified command or script.
+    * Communication with the child process happens through streams (stdin, stdout, stderr)
+  
+ * fork()
+    * Creates a child process specifically for running Node.js code.
+    * It creates a new Node.js process that runs JavaScript code, but with a separate memory space.
+    * Typically used for parallelizing Node.js code execution (for example, splitting a heavy computation task across multiple processes).
+    * Communication between the parent and child is done via Inter-Process Communication (IPC), which uses message passing.
+
+# Concurrency
+  * Concurrency refers to the ability of a system to handle multiple tasks at once, but not necessarily simultaneously
+
+# Parallelism 
+  * Parallelism, on the other hand, refers to the actual simultaneous execution of tasks, where multiple tasks run at the same time on different CPU cores. In parallelism, tasks can truly execute at the same time in separate processes or threads.   
+    
+# event driven architector
+
+   * Event-driven architecture uses events and listeners to process tasks. (what)
+   *  It enables efficient, non-blocking, and scalable applications.(why)
+   *  Use it in real-time apps, I/O-heavy apps, and microservices. (when)
+   *  HTTP servers, streams, timers, and sockets in Node.js.(where)
+   *  Events are managed by the event loop and implemented via the EventEmitter class.(how)
+
 
 
 # stream and buffer
