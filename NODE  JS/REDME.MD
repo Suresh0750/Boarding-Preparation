@@ -431,4 +431,133 @@ Parallelism: Refers to executing tasks simultaneously, often using multiple core
  * req.params is an object that contains route parameters in the URL. These are placeholders in the route path that allow you to capture dynamic values in the URL.
  * req.query is an object that contains query parameters in the URL. Query parameters are the key-value pairs in the URL after the ? symbol.
 
+
+# events - emit, on
+
+ * emit triggers events and can pass data to listeners.
+ * on listens for events and handles them when they are emitted.
+
+# Advandage of Node Js
+
+ * Asynchronous and Non-blocking I/O:
+ * Single Programming Language (JavaScript):
+ * Fast Execution (V8 Engine):'
+ * Real-time Applications:
+ * open source
+  
+
+# Event Loop
+ * The Event Loop is a mechanism in Node.js that handles and processes different phases of asynchronous operations. It keeps the Node.js process alive and waits for tasks, callbacks, or events to execute.
+
+
+# eventqueue
+
+ * In Node.js, the Event Queue is a data structure that holds asynchronous tasks (callbacks or events) which are ready to be executed. It plays a significant role in the Event-Driven Architecture of Node.js and works closely with the Event Loop to manage asynchronous operations efficiently.
+
+# process.nextTick
+
+ * process.nextTick() is a method in Node.js that allows you to schedule a callback function to be executed immediately after the current operation completes, but before the event loop moves to the next phase.
+
+It is a part of the microtask queue in Node.js and has a higher priority compared to other asynchronous operations like setTimeout or setImmediate.
+
+# Timer function 
+
+ * Timer functions in Node.js are part of the Timers module, which provides methods to execute code after a delay or repeatedly at specified intervals. These functions use the libuv library and are implemented as part of the Event Loop in Node.js.
+  
+
+# buffer 
+
+ * A Buffer in Node.js is a temporary storage area for binary data.
+ * It is used to handle raw data like streams, which may not necessarily be in a specific encoding format.
+ * Buffers are similar to arrays but deal with binary data instead of strings or objects.
+  
+# pipe 
+
+ * In Node.js, the pipe method is used to connect a readable stream to a writable stream.
+ * It allows the flow of data from the source stream (readable) to the destination stream (writable) automatically and efficiently.
+
+# morgan 
+  
+  * Morgan is a HTTP request logger middleware for Node.js.
+  * It is used to log incoming HTTP requests to your Node.js server.
+  * Morgan is especially useful for debugging, monitoring, and understanding incoming traffic patterns.
+  
+# Helmet 
+
+ * Helmet is a collection of security middleware for Node.js applications, primarily designed for Express.js.
+ * It helps secure your application by setting various HTTP headers that protect against common web vulnerabilities.
+
+# express.json()
+
+ * express.json() is a built-in middleware function in Express.js that is used to parse incoming JSON-formatted request bodies.
+ * It is specifically designed to handle requests where the body content is in JSON format (Content-Type: application/json).
  
+
+# express.urlencoded()
+
+ * express.urlencoded() is a built-in middleware function in Express.js that is used to parse incoming request bodies in URL-encoded format (the default format for HTML forms).
+ * This middleware is designed to handle requests with the application/x-www-form-urlencoded content type, which is typically used for form submissions.
+
+# app.use()
+
+ * app.use() is a method in Express.js that is used to mount middleware functions at a specified path. It is called to add middleware to the request handling pipeline in an Express application.
+ *   Middleware functions are functions that have access to the request (req), response (res), and the next function (next) in the request-response cycle.
+  
+
+# writeHead
+
+    writeHead() is a higher-level method that sets both the status code and the headers together. You can only call it once before sending the response.
+
+# setHeader
+    setHeader() is used to set or modify individual headers, and you can call it multiple times before calling res.end() to send the response.
+
+# clustering
+    Clustering in Node.js is a technique that allows you to run multiple instances of a Node.js application on different CPU cores, taking full advantage of multi-core systems. Since Node.js operates on a single thread, it uses the event loop to handle multiple I/O operations concurrently. However, it cannot fully utilize multi-core systems by default, because the event loop runs in a single thread. Clustering solves this by spawning multiple processes (workers), each running on its own core.
+
+    In Node.js, the cluster module is used to create child processes, known as worker processes, that share the same server port. Each worker runs in its own process with its own event loop and memory space, allowing for true parallelism in multi-core environments.
+
+# NPM 
+
+    npm is the command-line interface (CLI) for interacting with npm (Node Package Manager), the default package manager for Node.js. It is used to install, update, and manage packages (libraries and tools) in your Node.js projects.
+
+# npx
+
+    npx is a tool bundled with npm that is used to execute Node.js binaries and packages that are not globally installed or dependencies of the project. It's a quick way to run packages without installing them globally.
+
+# yarn vs npm
+
+    both are used to manage the package. yarn is faster installation comperthen npm. npm provides package.lock.json, yarn give yarn.lock file. 
+    CLI tool : 
+        npm provides an integrated security feature with npm audit, which helps identify and fix vulnerabilities. Yarn doesn't have a direct equivalent but uses the same registry and supports using external tools for security checks.
+
+# types of middleware
+
+ * Built-in Middleware
+ * Third-Party Middleware 
+ * Built-in Middleware:
+ * Third-Party Middleware:
+ * Error-Handling Middleware:
+  
+# node core modules
+ * http
+ * fs
+ * os
+ * url
+ * events
+ * util
+ * crypto
+ * cluster
+ * dns
+
+# exprerss  
+
+   Express is a node js web application framework that provides broad features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application. It's a layer built on the top of the Node js that helps manage servers and routes.   
+
+# static files
+  * Static files are simply files that do not change. They are served to the client (the browser) exactly as they are stored on the server. Static files are simply files that do not change. They are served to the client (the browser) exactly as they are stored on the server. 
+  * ex : HTML, JS, Image, Css files.
+  
+    
+# package.json?.
+
+ * In a Node.js project, package.json is a fundamental file that contains metadata and configuration for your project. It is essentially the heart of a Node.js project and plays a vital role in managing dependencies, scripts, and other settings related to your application.
