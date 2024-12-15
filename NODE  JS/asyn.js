@@ -26,3 +26,12 @@ function multiply(a,b){
 }
 multiply(4,5)
 console.log('world')
+
+
+fs.stat('./Images',(err,data)=>{
+    if(err){
+        console.log(err.message)
+    }else{
+        console.log(data)
+    }
+})

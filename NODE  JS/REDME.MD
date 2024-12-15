@@ -1,10 +1,10 @@
-1. Cookies:
+# 1. Cookies:
     Created by: Websites
     
     Purpose: Cookies are small pieces of data that are stored on the user's computer by the web browser while browsing. They are created by websites and can be used to store information about the user, such as login sessions, preferences, tracking information, and other details specific to a user. For example, cookies can remember your login state on a website, so you don't have to log in again every time you visit.
     Scope: Cookies are typically domain-specific (e.g., a cookie set by example.com is only accessible by example.com). They can have expiration dates, after which they are automatically deleted.
 
-2. Cache:
+# 2. Cache:
 
 Created by: Web Browsers (and sometimes by websites via HTTP headers)
 
@@ -12,7 +12,7 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
     
     Scope: Cache is typically managed by the browser itself, and it is used to store content temporarily. It can be specific to a session or persisted longer based on caching rules set by the website (e.g., via cache-control headers).
 
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 ## 3 dependency vs devdependency
 
     Dependencies are the crucial packages required for your application to function in a production environment. At the same time, devDependencies are tools and utilities that aid in the development process but are not needed in production.
@@ -62,9 +62,6 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
      Traditional Server-Side Technologies (e.g., PHP, ASP.NET, Java Servlets) 👍
         Typically use a blocking, multi-threaded approach. Each request is handled by a separate thread. When a thread is waiting for an I/O operation to complete, it cannot handle other requests, leading to higher resource consumption and potential scalability issues.
 
-
-
- 
 
 ## namaste node js
 
@@ -136,7 +133,7 @@ Created by: Web Browsers (and sometimes by websites via HTTP headers)
 # what is module 
 
     In Node.js, a module is a reusable collection of JavaScript functions and objects that can be used by other applications.
-    module prodect there function, variable from leaking
+    module prodect there function, variable from leaking.
 
 # types of modules 
 
@@ -226,7 +223,7 @@ console.log(__filename)
 # threads
 
     In our operating system theres has multiple processor inside the processore one things is there is called threads. threads is nothing but is like a container where our application(c++) runs.
-
+    Inside the is small unite in there that's called thread.
 
 # developer shouldn't use synchrounse method
 
@@ -273,7 +270,7 @@ console.log(__filename)
 
         epoll operates O(1)
 
-# process 
+# process   
 
   * what 
         A process is an instance of a program in execution, created and managed by the operating system.
@@ -281,7 +278,16 @@ console.log(__filename)
         Main Process: Handles incoming requests and dispatches tasks.
         Child Processes: Perform tasks like file uploads, large computations, or running Python scripts.
         Inter-Process Communication: The main process communicates with child processes using message-passing (IPC-Inter-Process Communication ).
-            
+
+        A process is an instance of a running program. It is created first when you execute a program.
+        The process provides the environment where tasks can be executed.
+
+# thread
+  
+  A thread is a smaller unit of execution within a process, sharing memory with other threads.
+
+# task
+  * A task is a small unit of work handled inside the main thread or the libuv thread pool.      
 
 # How to achieve the paralisam in node js?.
   * A single process may not fully utilize multi-core CPUs. Running multiple processes helps achieve parallelism.
@@ -309,7 +315,17 @@ console.log(__filename)
   * Concurrency refers to the ability of a system to handle multiple tasks at once, but not necessarily simultaneously
 
 # Parallelism 
-  * Parallelism, on the other hand, refers to the actual simultaneous execution of tasks, where multiple tasks run at the same time on different CPU cores. In parallelism, tasks can truly execute at the same time in separate processes or threads.   
+  * Parallelism, on the other hand, refers to the actual simultaneous execution of tasks, where multiple tasks run at the same time on different CPU cores. In parallelism, tasks can truly execute at the same time in separate processes or threads.  
+
+
+# Parallelism vs. Concurrency in Node.js:
+Concurrency: Refers to handling multiple tasks at the same time, but not necessarily simultaneously. In Node.js, concurrency is achieved using the event loop, non-blocking I/O, and asynchronous callbacks.
+
+Parallelism: Refers to executing tasks simultaneously, often using multiple cores or threads. Node.js achieves parallelism through Worker Threads, Child Processes, libuv’s thread pool, and Clustering. 
+
+# cluster 
+
+ A higher-level module that creates worker processes to share the same server port and handle requests concurrently, specifically for scaling Node.js applications.
     
 # event driven architector
 
@@ -318,7 +334,6 @@ console.log(__filename)
    *  Use it in real-time apps, I/O-heavy apps, and microservices. (when)
    *  HTTP servers, streams, timers, and sockets in Node.js.(where)
    *  Events are managed by the event loop and implemented via the EventEmitter class.(how)
-
 
 
 # stream and buffer
@@ -358,3 +373,62 @@ console.log(__filename)
     * Sweep Phase:
             Non-marked (unreachable) objects are considered garbage.
             Their memory is reclaimed.  
+        
+#  ** Application Middleware**
+
+* Application middleware refers to functions that are executed for every request made to the application, regardless of which route is being accessed. They are typically used for tasks like logging, authentication, body parsing, session handling, and more.
+
+# **Router Middleware**
+
+* Router middleware is specific to a particular router and is used to handle requests that match a particular route or set of routes. You can define routers and apply middleware only to those routes.
+
+
+# CORS 
+
+    CORS - Cross-Origin Resource Sharing
+
+    CORS is used to prevent the malicious request to access our datas. CORS is ensure which domain request want to access the data.
+
+# **http option method**
+
+    The OPTIONS method is often sent by browsers as a preflight request before sending a more complex cross-origin request.
+    When a browser makes a cross-origin request (especially with methods other than GET or POST, or with custom headers), it may first send an OPTIONS request to check if the server allows the actual request.
+    This is called the preflight request and is part of the CORS process.
+
+# Allow-Access controller
+
+    Access Control refers to the process of controlling access to resources based on certain conditions, like origins, methods, and headers. In the context of web development and APIs, Access Control often involves Cross-Origin Resource Sharing (CORS), which defines the rules that govern how resources on a web server can be accessed by web pages from other domains or origins.
+    When we talk about "Allow Access Control", we're referring to CORS and the Access-Control-Allow-Origin header (and other related headers) that a server uses to manage and allow access to its resources across different origins.
+
+# preflight request
+
+    Preflight request is an OPTIONS request sent by the browser before the actual request to check if cross-origin communication is allowed with the requested methods and headers.
+
+# CSRF (Cross-Site Request Forgery)
+
+    CSRF is an attack that tricks a user’s browser into making an unwanted request to a website on behalf of an authenticated user.
+    CSRF attacks are prevented using anti-CSRF tokens, same-origin policies, and validation of request headers and origins.
+
+
+# REST API
+
+    A REST API is a set of guidelines for creating web services that communicate via HTTP and use standard HTTP methods (GET, POST, PUT, DELETE).
+
+# inbuild module
+
+    In Node.js, inbuilt modules (also known as core modules) are modules that come pre-packaged with Node.js. These modules provide essential functionalities that are frequently needed in server-side development, such as working with files, handling HTTP requests, or creating buffers. You don't need to install these modules using npm; they are readily available for use in any Node.js application.
+
+# fs module
+
+    The fs (File System) module in Node.js is a core module that provides an API for interacting with the file system. This module allows you to read, write, delete, and perform other operations on files and directories in a Node.js application. It is used for tasks such as file manipulation, reading/writing data, and working with file metadata.
+
+# fs.stat
+
+    The fs.stat method in Node.js is used to retrieve information about a file or directory. It returns an object containing detailed information about a file's properties, such as its size, permissions, modification times, and other metadata.
+
+# req.params , req.query
+
+ * req.params is an object that contains route parameters in the URL. These are placeholders in the route path that allow you to capture dynamic values in the URL.
+ * req.query is an object that contains query parameters in the URL. Query parameters are the key-value pairs in the URL after the ? symbol.
+
+ 
