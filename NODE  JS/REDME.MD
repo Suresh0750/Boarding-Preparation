@@ -447,61 +447,61 @@ Parallelism: Refers to executing tasks simultaneously, often using multiple core
   
 
 # Event Loop
- * The Event Loop is a mechanism in Node.js that handles and processes different phases of asynchronous operations. It keeps the Node.js process alive and waits for tasks, callbacks, or events to execute.
+  The Event Loop is a mechanism in Node.js that handles and processes different phases of asynchronous operations. It keeps the Node.js process alive and waits for tasks, callbacks, or events to execute.
 
 
 # eventqueue
 
- * In Node.js, the Event Queue is a data structure that holds asynchronous tasks (callbacks or events) which are ready to be executed. It plays a significant role in the Event-Driven Architecture of Node.js and works closely with the Event Loop to manage asynchronous operations efficiently.
+  In Node.js, the Event Queue is a data structure that holds asynchronous tasks (callbacks or events) which are ready to be executed. It plays a significant role in the Event-Driven Architecture of Node.js and works closely with the Event Loop to manage asynchronous operations efficiently.
 
 # process.nextTick
 
- * process.nextTick() is a method in Node.js that allows you to schedule a callback function to be executed immediately after the current operation completes, but before the event loop moves to the next phase.
+  process.nextTick() is a method in Node.js that allows you to schedule a callback function to be executed immediately after the current operation completes, but before the event loop moves to the next phase.
 
 It is a part of the microtask queue in Node.js and has a higher priority compared to other asynchronous operations like setTimeout or setImmediate.
 
 # Timer function 
 
- * Timer functions in Node.js are part of the Timers module, which provides methods to execute code after a delay or repeatedly at specified intervals. These functions use the libuv library and are implemented as part of the Event Loop in Node.js.
+  Timer functions in Node.js are part of the Timers module, which provides methods to execute code after a delay or repeatedly at specified intervals. These functions use the libuv library and are implemented as part of the Event Loop in Node.js.
   
 
 # buffer 
 
- * A Buffer in Node.js is a temporary storage area for binary data.
- * It is used to handle raw data like streams, which may not necessarily be in a specific encoding format.
- * Buffers are similar to arrays but deal with binary data instead of strings or objects.
+  A Buffer in Node.js is a temporary storage area for binary data.
+  It is used to handle raw data like streams, which may not necessarily be in a specific encoding format.
+  Buffers are similar to arrays but deal with binary data instead of strings or objects.
   
 # pipe 
 
- * In Node.js, the pipe method is used to connect a readable stream to a writable stream.
- * It allows the flow of data from the source stream (readable) to the destination stream (writable) automatically and efficiently.
+  In Node.js, the pipe method is used to connect a readable stream to a writable stream.
+  It allows the flow of data from the source stream (readable) to the destination stream (writable) automatically and efficiently.
 
 # morgan 
   
-  * Morgan is a HTTP request logger middleware for Node.js.
-  * It is used to log incoming HTTP requests to your Node.js server.
-  * Morgan is especially useful for debugging, monitoring, and understanding incoming traffic patterns.
+   Morgan is a HTTP request logger middleware for Node.js.
+   It is used to log incoming HTTP requests to your Node.js server.
+   Morgan is especially useful for debugging, monitoring, and understanding incoming traffic patterns.
   
 # Helmet 
 
- * Helmet is a collection of security middleware for Node.js applications, primarily designed for Express.js.
- * It helps secure your application by setting various HTTP headers that protect against common web vulnerabilities.
+  Helmet is a collection of security middleware for Node.js applications, primarily designed for Express.js.
+  It helps secure your application by setting various HTTP headers that protect against common web vulnerabilities.
 
 # express.json()
 
- * express.json() is a built-in middleware function in Express.js that is used to parse incoming JSON-formatted request bodies.
- * It is specifically designed to handle requests where the body content is in JSON format (Content-Type: application/json).
+  express.json() is a built-in middleware function in Express.js that is used to parse incoming JSON-formatted request bodies.
+  It is specifically designed to handle requests where the body content is in JSON format (Content-Type: application/json).
  
 
 # express.urlencoded()
 
- * express.urlencoded() is a built-in middleware function in Express.js that is used to parse incoming request bodies in URL-encoded format (the default format for HTML forms).
- * This middleware is designed to handle requests with the application/x-www-form-urlencoded content type, which is typically used for form submissions.
+  express.urlencoded() is a built-in middleware function in Express.js that is used to parse incoming request bodies in URL-encoded format (the default format for HTML forms).
+  This middleware is designed to handle requests with the application/x-www-form-urlencoded content type, which is typically used for form submissions.
 
 # app.use()
 
- * app.use() is a method in Express.js that is used to mount middleware functions at a specified path. It is called to add middleware to the request handling pipeline in an Express application.
- *   Middleware functions are functions that have access to the request (req), response (res), and the next function (next) in the request-response cycle.
+  app.use() is a method in Express.js that is used to mount middleware functions at a specified path. It is called to add middleware to the request handling pipeline in an Express application.
+  Middleware functions are functions that have access to the request (req), response (res), and the next function (next) in the request-response cycle.
   
 
 # writeHead
@@ -554,10 +554,61 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
    Express is a node js web application framework that provides broad features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application. It's a layer built on the top of the Node js that helps manage servers and routes.   
 
 # static files
-  * Static files are simply files that do not change. They are served to the client (the browser) exactly as they are stored on the server. Static files are simply files that do not change. They are served to the client (the browser) exactly as they are stored on the server. 
-  * ex : HTML, JS, Image, Css files.
+   Static files are simply files that do not change. They are served to the client (the browser) exactly as they are stored on the server. Static files are simply files that do not change. They are served to the client (the browser) exactly as they are stored on the server. 
+   ex : HTML, JS, Image, Css files.
   
     
 # package.json?.
 
- * In a Node.js project, package.json is a fundamental file that contains metadata and configuration for your project. It is essentially the heart of a Node.js project and plays a vital role in managing dependencies, scripts, and other settings related to your application.
+  In a Node.js project, package.json is a fundamental file that contains metadata and configuration for your project. It is essentially the heart of a Node.js project and plays a vital role in managing dependencies, scripts, and other settings related to your application.
+
+# package-lock.json
+
+    package-lock.json is an automatically generated file in a Node.js project that contains detailed information about the exact versions of dependencies installed in the project. It is created when you run npm install and ensures consistent and deterministic dependency installation across different environments.
+
+
+# Error-First Callback
+
+    An error-first callback is a standard pattern in Node.js used for asynchronous operations. It ensures that errors are handled properly in asynchronous code, making it easier to debug and manage potential issues.
+
+    The first argument is reserved for an error object (if any error occurs).
+
+# server commmunication
+
+    Server communication is the process where a server receives requests (e.g., HTTP requests) from a client, processes the data, and responds back to the client. This communication can happen synchronously or asynchronously.
+
+# http Vs https
+
+* http
+    HTTP (HyperText Transfer Protocol) is a protocol for transmitting data (e.g., text, images, videos) between a web client and a server.It operates over port 80 by default.
+    HTTP is stateless, meaning each request is independent.
+    It does not encrypt the data being transferred, making it less secure.
+* https
+    HTTPS (HyperText Transfer Protocol Secure) is an extension of HTTP with added security.
+    It uses SSL/TLS (Secure Socket Layer/Transport Layer Security) to encrypt data transmitted between the client and server.
+    Operates over port 443 by default.
+    Ensures confidentiality, integrity, and authentication of data.
+
+# DNS module
+
+    The DNS module in Node.js provides functionality for performing Domain Name System (DNS) lookups and resolving domain names into IP addresses.
+
+# What is Scaffolding?
+
+    Scaffolding is the process of automatically generating the basic structure of a project or application, so developers can focus on building features rather than setting up repetitive boilerplate code.
+
+# PUT and PATCH
+
+    PUT: Replaces the entire resource with a new version.
+    PATCH: Partially updates a specific part of the resource.
+
+# router.all
+
+    router.all() is a method in Express.js used to handle HTTP requests for all methods (GET, POST, PUT, DELETE, etc.) at a specified path.
+    It acts as a catch-all handler for requests to a specific route.
+
+# dynamic routing
+
+    Dynamic routing allows you to define routes in your Node.js server that can handle variable parameters in the URL. These parameters are dynamic, which means they can change based on the request.
+
+
