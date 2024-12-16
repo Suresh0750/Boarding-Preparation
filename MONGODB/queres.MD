@@ -93,5 +93,39 @@
   * db.collectionname.find9{$lte:{filed:500}}
   * db.collectionname.find({$gt:{field:value}})
   * db.collectionname.find({$lt:{field:value}})
+
+
+## from Orders collection
   
-  # 
+  # match
+
+
+    db.practice.aggregate([
+              {$match:{status:"Delivered"}}
+            ])
+
+    db.practice.aggregate([
+        {$match:{status:"Delivered"}}
+      ])
+
+    db.practice.aggregate([
+      {$match:{$or:[{item:{$size:2}},{totalAmount:{$lte:200}}]}}
+    ])
+    db.orders.aggregate([
+      {$match:{status:{$eq:'Shipped'}}}
+    ])
+    db.orders.aggregate([
+      {$match:{status:{$ne:"Pending"}}}
+    ])
+    db.orders.aggregate([
+      {$match:{totalAmount:{$gt:1000}}}
+    ])
+    db.orders.aggregate([
+      {$match:{totalAmount:{$gte:500}}}
+    ])
+    db.orders.aggregate([
+      {$match:{totalAmount:{$lt:500}}}
+    ])
+    db.orders.aggregate([
+      {$match:{$and:[{status:'Pending'},{totalAmount:{$lte:750}}]}}
+    ])

@@ -1,0 +1,93 @@
+[
+    {
+      "_id": 1,
+      "orderId": "ORD1001",
+      "status": "Shipped",
+      "totalAmount": 1200,
+      "items": ["Laptop", "Mouse"],
+      "customer": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "address": { "city": "New York", "zip": 10001 }
+      },
+      "createdAt": "2024-06-20T10:00:00Z"
+    },
+    {
+      "_id": 2,
+      "orderId": "ORD1002",
+      "status": "Pending",
+      "totalAmount": 300,
+      "items": ["Keyboard"],
+      "customer": {
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "address": { "city": "San Francisco", "zip": 94101 }
+      },
+      "createdAt": "2024-06-21T15:30:00Z"
+    },
+    {
+      "_id": 3,
+      "orderId": "ORD1003",
+      "status": "Cancelled",
+      "totalAmount": 1500,
+      "items": ["Monitor", "Headset"],
+      "customer": {
+        "name": "Sam Wilson",
+        "email": null,
+        "address": { "city": "Los Angeles", "zip": 90001 }
+      },
+      "createdAt": "2024-06-22T08:45:00Z"
+    },
+    {
+      "_id": 4,
+      "orderId": "ORD1004",
+      "status": "Shipped",
+      "totalAmount": 750,
+      "items": ["Tablet"],
+      "customer": {
+        "name": "Anna Brown",
+        "email": "anna@example.com",
+        "address": { "city": "Chicago", "zip": 60601 }
+      },
+      "createdAt": "2024-06-23T14:00:00Z"
+    },
+    {
+      "_id": 5,
+      "orderId": "ORD1005",
+      "status": "Pending",
+      "totalAmount": 500,
+      "items": [],
+      "customer": {
+        "name": "Michael Scott",
+        "email": "michael@dundermifflin.com",
+        "address": { "city": "Scranton", "zip": 18501 }
+      },
+      "createdAt": "2024-06-24T09:15:00Z"
+    },
+    {
+      "_id": 6,
+      "orderId": "ORD1006",
+      "status": "Shipped",
+      "totalAmount": 950,
+      "items": ["Phone", "Charger", "Case"],
+      "customer": {
+        "name": "Dwight Schrute",
+        "email": "dwight@dundermifflin.com",
+        "address": { "city": "Scranton", "zip": 18501 }
+      },
+      "createdAt": "2024-06-25T16:00:00Z"
+    },
+    {
+      "_id": 7,
+      "orderId": "ORD1007",
+      "status": "Cancelled",
+      "totalAmount": 120,
+      "items": ["Book"],
+      "customer": {
+        "name": "Pam Beesly",
+        "email": "pam@dundermifflin.com",
+        "address": { "city": "Scranton", "zip": 18501 }
+      },
+      "createdAt": "2024-06-26T12:30:00Z"
+    }
+  ]
