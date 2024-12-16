@@ -382,7 +382,6 @@ Parallelism: Refers to executing tasks simultaneously, often using multiple core
 
 * Router middleware is specific to a particular router and is used to handle requests that match a particular route or set of routes. You can define routers and apply middleware only to those routes.
 
-
 # CORS 
 
     CORS - Cross-Origin Resource Sharing
@@ -400,7 +399,7 @@ Parallelism: Refers to executing tasks simultaneously, often using multiple core
     Access Control refers to the process of controlling access to resources based on certain conditions, like origins, methods, and headers. In the context of web development and APIs, Access Control often involves Cross-Origin Resource Sharing (CORS), which defines the rules that govern how resources on a web server can be accessed by web pages from other domains or origins.
     When we talk about "Allow Access Control", we're referring to CORS and the Access-Control-Allow-Origin header (and other related headers) that a server uses to manage and allow access to its resources across different origins.
 
-# preflight request
+# preflight request 
 
     Preflight request is an OPTIONS request sent by the browser before the actual request to check if cross-origin communication is allowed with the requested methods and headers.
 
@@ -414,11 +413,16 @@ Parallelism: Refers to executing tasks simultaneously, often using multiple core
 
     A REST API is a set of guidelines for creating web services that communicate via HTTP and use standard HTTP methods (GET, POST, PUT, DELETE).
 
+#  type of module  
+        core module
+        local module
+        Third-Party module
+
 # inbuild module
 
     In Node.js, inbuilt modules (also known as core modules) are modules that come pre-packaged with Node.js. These modules provide essential functionalities that are frequently needed in server-side development, such as working with files, handling HTTP requests, or creating buffers. You don't need to install these modules using npm; they are readily available for use in any Node.js application.
 
-# fs module
+# fs module 
 
     The fs (File System) module in Node.js is a core module that provides an API for interacting with the file system. This module allows you to read, write, delete, and perform other operations on files and directories in a Node.js application. It is used for tasks such as file manipulation, reading/writing data, and working with file metadata.
 
@@ -431,7 +435,7 @@ Parallelism: Refers to executing tasks simultaneously, often using multiple core
  * req.params is an object that contains route parameters in the URL. These are placeholders in the route path that allow you to capture dynamic values in the URL.
  * req.query is an object that contains query parameters in the URL. Query parameters are the key-value pairs in the URL after the ? symbol.
 
-
+        
 # events - emit, on
 
  * emit triggers events and can pass data to listeners.
@@ -532,8 +536,8 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
 
 # types of middleware
 
- * Built-in Middleware
- * Third-Party Middleware 
+ * application Middleware
+ * router Middleware 
  * Built-in Middleware:
  * Third-Party Middleware:
  * Error-Handling Middleware:
@@ -611,4 +615,8 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
 
     Dynamic routing allows you to define routes in your Node.js server that can handle variable parameters in the URL. These parameters are dynamic, which means they can change based on the request.
 
+# Authentication
+    Authentication is the process of verifying the identity of a user or system. It ensures that the person or entity accessing the application is who they claim to be.
 
+# Authorization
+    Authorization is the process of determining whether an authenticated user has permission to access a particular resource or perform a specific action. It happens after authentication and ensures that users only have access to the resources they are allowed to.
