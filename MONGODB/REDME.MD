@@ -45,3 +45,18 @@
 ## rename operator
 
 db.collection.update({},{$rename:{oldName:"rename"}})
+
+
+## aggregation
+
+# match
+
+    match is the stage in aggregation pipeline used to filter the documents
+
+# $project
+
+    $project is a stage in MongoDB's aggregation pipeline used to include, exclude, or compute fields in the output documents.
+
+    You can select specific fields to show.
+    Add new fields with computed values (like calculations).
+    Exclude fields that you don’t need.
