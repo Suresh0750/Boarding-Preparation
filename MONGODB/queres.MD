@@ -59,7 +59,7 @@
   * db.collectionname.updateMany({condition},{$unset:{deletekey:"$deletekey"}})     // * if the value is n't same for all field we can use $keyname as a value
   
   # RENAME FIELDS
-  * db.collectionname.updateOne({condition},{$rename:"new name of filed"})4
+  * db.collectionname.updateOne({condition},{$rename:{"old name of the field" : "new name of filed"}})
   
 
 
@@ -214,4 +214,12 @@
       }
     }
   ])
+
+# group
+
+   db.orders.aggregate([ { $group:{_id:{amount:{$sum:'$totalAmount'},status:"$status"}}}])
+   db.orders.aggregate([{$group:{_id:"$status",amount:{$sum:'$totalAmount'}}}])
+
+# lookup
+
   

@@ -60,3 +60,172 @@ db.collection.update({},{$rename:{oldName:"rename"}})
     You can select specific fields to show.
     Add new fields with computed values (like calculations).
     Exclude fields that you don’t need.
+
+# journaling
+
+    Journaling in MongoDB is a mechanism that ensures data integrity and durability in the event of an unexpected failure, such as a server crash, power outage, or system failure. It works by keeping a log of write operations in a journal file before committing those changes to the main data files on disk. This log can then be used to recover the database to a consistent state.
+
+    In simpler terms, journaling acts like a safety net, ensuring that no data is lost during write operations even if the server crashes.
+
+# sharding
+
+    Sharding is a method MongoDB uses to split large amounts of data across multiple servers (called shards). This helps manage very large datasets and ensures better performance as the database grows.
+
+# Horizontal Scaling 
+
+    Horizontal scaling means adding more machines (servers) to handle increasing loads of data and requests. It distributes the workload across multiple servers instead of relying on one single powerful server.
+
+# Vertical scalin
+
+    Vertical scaling, also known as "scaling up," refers to increasing the capacity of a single server or system to handle more load. Instead of adding more machines, you enhance the existing server by adding more CPU, RAM, storage, or other resources to improve performance.
+
+# Replication
+
+    Replication is the process of copying data from one database (primary/master) to another database (secondary/slave) to ensure consistency and redundancy.
+
+# relational vs non relational 
+    relational database is every data store inside of the table . non relational database store the data in side document or graph , 
+    reational database table with row and column based , non relational database store key and value paire.
+    relational database used ACID property AND non  relational used cap theoram. 
+
+# sql vs nosql
+
+    sql is relational database nosql is non relational database.
+    sql vertical scalability and nosql horizontal scalability
+    sql store the data row and collumn and nosql key value pair
+    sql is using ACID property and nosql is CAP theoram.
+
+ # upsert true 
+
+    using upsert true if the value is not also the document will create.
+
+    db.collentionName.updateOne({name:'suresh'},{$set:{age:21},{upsert:true}})
+
+# cap theoram
+
+    Consistency (C) - Every read returns the most recent write (perfect data consistency).
+    Availability (A) - The system always responds to a request (even if it's not the most up-to-date data).
+    Partition Tolerance (P) - The system continues to function even if parts of it are disconnected (network partition).
+
+# replica set
+    A Replica Set in MongoDB is a group of servers (or nodes) that work together to maintain the same data set. 
+
+    original data is present in primary node. there are many secondary node is there if the primary node is damage means at that side election will happens which is conducted by Heartbeat node.
+
+# how to improve performance in mongodb
+
+    using createIndex 
+
+# TTL index
+    TTL is time to live
+    A TTL (Time-To-Live) index in MongoDB is a special type of index that automatically removes documents from a collection after a specified period of time.
+
+# Pipeline
+
+    Aggregation pipelines can have one or more "stages".
+    A pipeline is a sequence of stages used in the aggregation framework to process and transform data. It allows you to perform complex queries and data manipulations, such as filtering, grouping, sorting, and reshaping documents, all in a sequence of steps.
+
+#   query operators
+
+    query operators are used to specify conditions for querying documents in a collection. These operators help you filter documents based on specific criteria such as matching values, ranges, logical conditions, and more
+
+    $eq, $gt, $gte, $lt, $lte.
+
+#  Sharding Key
+
+    MongoDB uses a sharding key to determine how documents are distributed across the shards.
+
+ # shard components
+
+    shard key: userId
+    shards:
+    Config Servers
+    Mongos;
+
+# storage engine in mongodb
+
+    WiredTiger is the default storage engine
+
+# type coercion
+
+    In MongoDB, type coercion refers to the implicit or explicit conversion of values from one data type to another within queries or operations. 
+
+# ACID Properties in MongoDB:
+
+# Atomicity
+    Atomicity in database transactions ensures that all operations within a transaction are treated as a single, indivisible unit. This means that either all operations in the transaction are completed successfully, or none are applied at all. If any part of the transaction fails, the entire transaction is rolled back, and the database remains unchanged. This all-or-nothing approach prevents partial updates that could lead to data inconsistencies.
+
+In MongoDB, write operations are atomic at the document level. This means that even if multiple fields within a single document are being modified, the operation will either succeed entirely or have no effect, ensuring data integrity.
+
+# Consistency    
+
+    If a transaction begins, the database ensures that the data follows all integrity rules throughout the operation.
+    After the transaction completes, the database must maintain a consistent state.
+    In-between operations, the database may temporarily enter an inconsistent state, but when the transaction finishes, the consistency is restored.
+
+# Isolation
+
+    MongoDB operations are isolated at the document level.
+    In multi-document transactions (MongoDB 4.0+), operations are isolated, meaning other operations cannot see intermediate states of data being updated until the transaction is committed.
+
+# Durability
+
+    In the context of ACID properties of databases, Durability refers to the guarantee that once a transaction has been committed, it will persist, even in the event of a system failure (such as a power outage or crash).
+
+    Simple Explanation:
+    Imagine you're using an online banking app, and you transfer money from one account to another. After completing the transaction, the system confirms that your money has been transferred successfully (commit). Durability ensures that, even if the app crashes immediately after, the transaction's effect — the money being transferred — will never be lost. When the system comes back online, the transaction data is safely written and stored in the database.
+
+# namespace
+
+    if the collection name is contains with database name is called name space. 
+    example : 
+        database name : profinders
+        collection name : profinders.users // * here users is a collection name but we create with database name.
+
+# Cluster index
+
+    A clustered index in MongoDB is a type of index that determines the physical order in which documents are stored on disk, and it can significantly improve performance for range queries and time-series data. It is ideal for applications where data is inserted in a sequential manner, and you frequently query it in a sorted or ranged fashion. Clustered indexes help optimize disk usage, query performance, and the overall efficiency of read-heavy workloads.
+
+# Cluster collections
+
+    A clustered collection is a MongoDB collection that stores documents in a sorted order based on the value of the clustered index key. Collections created with a clustered index are called clustered collections. 
+
+# cluster
+    A cluster in MongoDB refers to a set of servers or nodes that work together to provide scalability, high availability, and data redundancy. This includes sharded clusters and replica sets, where multiple nodes (servers) are used to store and process data.
+
+    Types of MongoDB Clusters
+        Sharded Cluster (Horizontal Scaling)
+        Replica Set Cluster (High Availability) 
+
+ # schema less database
+    As a NoSQL database, MongoDB is considered schemaless because it does not require a rigid, pre-defined schema like a relational database
+    A schema database (like relational databases) follows a predefined structure or format for data storage, where the schema defines the organization of data and how the relationships between data elements are handled.
+
+# Schema-less Database (NoSQL Database)
+    A schema-less database (like most NoSQL databases) does not enforce a rigid schema or predefined structure for data. The data can vary from one record to another, and each record (or document) can have its own structure, allowing flexibility in how data is stored and retrieved.
+
+#  insert vs save
+
+    INSERT is used to insert the document to the database. save is working like shallow copy if we use find method and asign the object then if we insert the property and we use save is update the database is automatically.
+
+# types of indexing
+
+    Single Field index
+    Compound Index
+    Multikey Index
+    Geospatial Index
+    Clustered Index
+
+# view
+    A MongoDB view is a read-only queryable object whose contents are defined by an aggregation pipeline on other collections or views.
+
+# benefits of mongodb
+
+    Flexible Schema
+    Scalability
+    Performance
+    Rich Query Language
+
+# lookup
+
+     $lookup stage is used in an aggregation pipeline to perform a left outer join between two collections. It allows you to combine documents from one collection with documents from another based on a specified condition.
