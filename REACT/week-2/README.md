@@ -50,3 +50,40 @@ Currently, two official plugins are available:
     Shadow DOM is a web standard that allows developers to create a self-contained section of the DOM (Document Object Model) inside an element, where the content and styles are isolated from the rest of the document.
 
 
+# fetch vs axios
+
+    fetch 
+        Built-in browser API,
+        Doesn't throw on 404 or 500, needs manual checking
+        Requires manual parsing (.json(), .text())
+        No built-in support(request Interceptors)
+    
+    axios 
+        External library (third-party)
+        Throws on non-2xx status codes
+        Automatically parses JSON response
+        Built-in support for interceptors
+
+# useParams
+
+    In React, useParams is a hook provided by the react-router-dom library, which allows you to access the parameters of the current URL in a functional component. These parameters are typically dynamic segments of a URL, such as the id of a resource, which can be useful for routing and rendering dynamic content based on the URL.
+
+# forwardRef
+
+    forwardRef is used when you need to forward a ref from a parent component to a child component, especially when the child component is a functional component. It’s a way to allow functional components to work with refs that are typically used with class components.   
+
+# PropTypes
+
+    PropTypes is a feature in React used for type checking the props that a component receives. It ensures that the props passed to a component have the correct data types, helping to catch potential bugs and making your code more robust.
+
+# Portals
+
+    React Portals provide a way to render a child component outside the DOM hierarchy of its parent component while maintaining the React component tree.
+
+# outlet
+
+     Outlet is a special component used with React Router for rendering nested routes. It serves as a placeholder where child route components are rendered when working with nested routing.
+
+
+
+
