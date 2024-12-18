@@ -12,18 +12,18 @@ class Graph{
         }
     }
     addEdges(vertex1, vertex2, weight) {
-    if (!this.adjacencyList[vertex1]) this.addVertex(vertex1);
-    if (!this.adjacencyList[vertex2]) this.addVertex(vertex2);
+        if (!this.adjacencyList[vertex1]) this.addVertex(vertex1);
+        if (!this.adjacencyList[vertex2]) this.addVertex(vertex2);
 
-    // *Check for duplicate edge
-    const existingEdge = this.adjacencyList[vertex1].find(edge => edge.node === vertex2);
-    if (existingEdge) {
-        existingEdge.weight = weight; // *  Update weight if edge exists
-    } else {
-        this.adjacencyList[vertex1].push({ node: vertex2, weight });
-        this.adjacencyList[vertex2].push({ node: vertex1, weight });
+        // *Check for duplicate edge
+        const existingEdge = this.adjacencyList[vertex1].find(edge => edge.node === vertex2);
+        if (existingEdge) {
+            existingEdge.weight = weight; // *  Updat   e weight if edge exists
+        } else {
+            this.adjacencyList[vertex1].push({ node: vertex2, weight });
+            this.adjacencyList[vertex2].push({ node: vertex1, weight });
+        }
     }
-}
     display(){
         
         for(let vertex in this.adjacencyList){
