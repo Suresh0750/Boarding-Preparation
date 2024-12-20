@@ -229,3 +229,5 @@ In MongoDB, write operations are atomic at the document level. This means that e
 # lookup
 
      $lookup stage is used in an aggregation pipeline to perform a left outer join between two collections. It allows you to combine documents from one collection with documents from another based on a specified condition.
+
+# 

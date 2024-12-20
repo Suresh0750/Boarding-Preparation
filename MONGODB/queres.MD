@@ -191,7 +191,7 @@
     ])
     db.orders.aggregate([
       {$project:{totalCount:{$size:'$items'}}}
-    ])
+    ])  
     db.orders.aggregate([
       {$project:{customerName:'$customer.name'}}
     ])
@@ -222,4 +222,28 @@
 
 # lookup
 
-  
+  db.orders.aggregate([
+    {
+      $lookup:{
+        from:'practice',
+        localField:"_id",
+        foreignField : 'customerId',
+        as : newField
+      }
+    }
+  ])
+
+# facet
+  db.orders.aggregate([
+  {
+    $facet:{
+          groupByStatus:[{$group:{_id:"$status",count:{$sum:1}}}],
+          groupByaverage:[{$group:{_id:"$status",avarage:{$avg:"$totalAmount"}}}]
+            }
+    }
+    ])
+
+# $unwind 
+  db.orders.aggregate([
+    {$unwind:"$items"}                       // * used to create seperate documents for each elementss in array.
+  ])

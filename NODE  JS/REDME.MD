@@ -247,7 +247,9 @@ console.log(__filename)
 
     defaultly libuv have 4 thread pool for handle the asynchrounous function but we can reasign the number of thread pools . process.env.UV_THREADPOOL_SIZE = 10
 
+# app.set   
 
+    In Node.js, particularly in the context of Express.js, app.set is a method used to configure or set application-level settings for an Express application. These settings are used to store values that can be accessed throughout the application and can influence how the app behaves.
 
 # episode -10
 
