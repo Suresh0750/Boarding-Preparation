@@ -230,4 +230,20 @@ In MongoDB, write operations are atomic at the document level. This means that e
 
      $lookup stage is used in an aggregation pipeline to perform a left outer join between two collections. It allows you to combine documents from one collection with documents from another based on a specified condition.
 
-# 
+# bulkWrite
+
+    bulkWrite is a method used to perform multiple write operations (insert, update, delete, or replace) in a single request efficiently. It reduces the overhead of sending multiple requests to the server, improving performance.
+
+    only we can do write operation we can't do read operations.
+
+# explain()
+
+    The explain() method in MongoDB is used to analyze and understand how a query is executed. It provides details about how MongoDB plans to run the query, which can help identify performance issues, missing indexes, or query inefficiencies.
+
+# gridfs
+
+    GridFS is a feature in MongoDB that allows you to store and retrieve large files (e.g., images, videos, PDFs, etc.) that exceed the BSON document size limit of 16 MB. It splits large files into smaller chunks and stores them across multiple documents in the database.
+
+# Ad-Hoc Queries
+
+    Ad-Hoc Queries in MongoDB refer to dynamic queries that are not predefined. These queries can be created on the fly, allowing developers to search for and retrieve data based on specific, changing conditions.
