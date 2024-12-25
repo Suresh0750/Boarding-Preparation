@@ -84,7 +84,6 @@ Currently, two official plugins are available:
 
      Outlet is a special component used with React Router for rendering nested routes. It serves as a placeholder where child route components are rendered when working with nested routing.
 
-
 # Limitation of redux
 
     Boilerplate Code
