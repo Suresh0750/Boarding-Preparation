@@ -247,3 +247,36 @@
   db.orders.aggregate([
     {$unwind:"$items"}                       // * used to create seperate documents for each elementss in array.
   ])
+
+
+
+# aggregations important piplines:
+# Basic Stages
+* $match -->[$size,]
+* $group
+* $project -->[$concat]
+* $sort
+* $limit
+* $skip
+* $unwind
+* $addFields / $set
+* $out
+
+
+# Additional Stages
+* $lookup
+* $merge
+* $count
+* $facet
+* $bucket
+* $cond
+* $bucketAuto
+* $sample
+* $replaceRoot / $replaceWith
+* $geoNear
+
+
+
+# db.products.aggregate([{$sort:{price:-1}},{$group:{_id:'$category',maxExpensiveProduct:{$first:'$$ROOT'}}}])
+#  db.students.aggregate([{$project:{name:1,mark:{$objectToArray:'$marks'}}},{$unwind:'$mark'},{$project:{name:1,addMark:'$mark.k',addScore:'$mark.v'}},{$sort:{addScore:-1}},{$group:{_id:'$addMark',newCollection:{$first:'$addScore'}}}])
+# db.students.aggregate([ { $match: { class: '10th' } },{$project:{name:1,marks:{$objectToArray:'$marks'}}},{$unwind:'$marks'},{$match:{'marks.k':'Math'}},{$group:{_id:'$marks.k',avgMarks:{$avg:'$marks.v'}}}] )

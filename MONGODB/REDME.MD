@@ -16,8 +16,11 @@
 
     https://medium.com/@vikramgyawali57/transactions-in-mongodb-basics-and-example-4c2d8aab55eb
 
+# single purpose aggregations
 
-## capped collection
+    A "single-purpose aggregation" would refer to an aggregation operation where the aggregation pipeline or a particular stage focuses on a single task or goal. In this case, if the aggregation only performs one specific operation—like just grouping documents with the $group stage without any additional operations like filtering, sorting, or projecting—it can be considered a "single-purpose aggregation."
+
+## capped collectionx
 
     Capped collections are fixed-size collections that insert and retrieve documents based on insertion order. Capped collections work similarly to circular buffers: once a collection fills its allocated space, it makes room for new documents by overwriting the oldest documents in the collection.
     
@@ -84,9 +87,22 @@ db.collection.update({},{$rename:{oldName:"rename"}})
     Replication is the process of copying data from one database (primary/master) to another database (secondary/slave) to ensure consistency and redundancy.
 
 # relational vs non relational 
-    relational database is every data store inside of the table . non relational database store the data in side document or graph , 
-    reational database table with row and column based , non relational database store key and value paire.
-    relational database used ACID property AND non  relational used cap theoram. 
+
+        Relational Databases (RDBMS)
+            Tables with rows and columns
+            Fixed schema, requires definition
+            Fully ACID-compliant
+            Vertical scalability (scaling up)
+            Strong data integrity and constraints	
+            Full support for transactions	
+        Non-Relational Databases (NoSQL)
+            Key-value, document, graph, column-family
+            Schema-less or flexible schema
+            Horizontal scalability (scaling out)
+            Limited data integrity
+            Limited or no support for transactions
+
+
 
 # sql vs nosql
 
@@ -112,6 +128,18 @@ db.collection.update({},{$rename:{oldName:"rename"}})
 
     original data is present in primary node. there are many secondary node is there if the primary node is damage means at that side election will happens which is conducted by Heartbeat node.
 
+# index
+
+     indexing refers to the process of creating data structures (indexes) that improve the speed of data retrieval operations on a collection. Indexes are similar to the index in a book—they allow the database to quickly locate the documents that match specific query criteria, without having to scan the entire collection. 
+
+# drawbacks of indexing
+
+    Increased Storage Requirements
+    Slower Write Operations
+    Overhead for Index Maintenance
+    Impact on Query Optimization
+    Complexity in Index Management
+
 # how to improve performance in mongodb
 
     using createIndex 
@@ -127,7 +155,7 @@ db.collection.update({},{$rename:{oldName:"rename"}})
 
 #   query operators
 
-    query operators are used to specify conditions for querying documents in a collection. These operators help you filter documents based on specific criteria such as matching values, ranges, logical conditions, and more
+    query operators are used to specify conditions for querying documents in a collection. These operators help you filter documents based on specific criteria such as matching values, ranges, logical conditions, and more 
 
     $eq, $gt, $gte, $lt, $lte.
 
@@ -216,6 +244,15 @@ In MongoDB, write operations are atomic at the document level. This means that e
     Geospatial Index
     Clustered Index
 
+# Compound Index
+    
+    A compound index is an index created on multiple fields. It allows MongoDB to optimize queries that filter on several fields at once.
+
+# Multikey Index
+
+    A multikey index is used when a field in a document contains an array. MongoDB automatically creates a multikey index when you index a field that holds an array of values.
+
+
 # view
     A MongoDB view is a read-only queryable object whose contents are defined by an aggregation pipeline on other collections or views.
 
@@ -247,3 +284,25 @@ In MongoDB, write operations are atomic at the document level. This means that e
 # Ad-Hoc Queries
 
     Ad-Hoc Queries in MongoDB refer to dynamic queries that are not predefined. These queries can be created on the fly, allowing developers to search for and retrieve data based on specific, changing conditions.
+
+# covered queries
+    covered query is one where all the fields required by the query (in the find() query, projection, and sort()) are available in the index itself. This means that MongoDB can satisfy the query using only the index without needing to access the actual documents in the collection.
+
+# minKey: 
+    Represents the smallest possible value in MongoDB.
+# MaxKey: 
+    Represents the largest possible value in MongoDB.       
+
+# why BSON is faster
+
+    Compact storage
+    Faster parsing
+    Efficient data types
+    Faster indexing
+    Predefined field lengths
+    Reduced network transfer time
+    Memory Efficiency   
+
+# Alias
+
+     aliasing refers to the ability to create alternate names or references for fields, collections, or databases. 

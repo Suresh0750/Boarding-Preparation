@@ -492,7 +492,7 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
 
   Helmet is a collection of security middleware for Node.js applications, primarily designed for Express.js.
   It helps secure your application by setting various HTTP headers that protect against common web vulnerabilities.
-
+    
 # express.json()
 
   express.json() is a built-in middleware function in Express.js that is used to parse incoming JSON-formatted request bodies.
@@ -622,3 +622,23 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
 
 # Authorization
     Authorization is the process of determining whether an authenticated user has permission to access a particular resource or perform a specific action. It happens after authentication and ensures that users only have access to the resources they are allowed to.
+
+
+# Content negotiation
+    Content negotiation is the process that happens before the server sends data to the client. The client specifies in the headers (such as Accept, Accept-Language, or Accept-Encoding) what kind of data it can accept (e.g., JSON, XML, HTML). The server then uses this information to determine and send the response in the format or representation that matches the client's preference.
+
+    content negotiation ensures that the client and server "negotiate" the format of the response based on what the client can handle and what the server can provide. It’s like the client setting expectations in the headers, and the server delivering accordingly.
+
+# idempotency
+
+    Idempotency is a concept in computer science, particularly in HTTP and RESTful APIs, which ensures that repeating the same operation multiple times results in the same outcome as executing it once.
+
+    Methods like GET, PUT, and DELETE are idempotent, while POST is not.
+
+# Route Chaining: 
+    
+    This allows you to define multiple middleware or handlers for the same route in a chain, which will execute in order.
+
+# uri fragment 
+
+    A URI fragment (also called a hash fragment) is the part of a Uniform Resource Identifier (URI) that comes after a # symbol. It is typically used to refer to a specific section or identifier within the resource that is being pointed to by the URI. The fragment itself is not sent to the server; instead, it is used by the client (such as a web browser) to navigate to a specific part of the resource, like a particular section of a webpage
