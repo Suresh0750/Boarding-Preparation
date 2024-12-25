@@ -128,6 +128,7 @@ class BTree{
         }
         return getHeight(this.root)
     }
+    
 }
 
 const tree = new BTree();

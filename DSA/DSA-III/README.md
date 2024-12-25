@@ -52,6 +52,19 @@
     Routing and Navigation
     Decision Making and AI
 
+# BFS 
+    BFS (Breadth-First Search) in Trees
+    WHAT : 
+        BFS is a graph/tree traversal algorithm that explores all the nodes at the present depth level before moving on to nodes at the next depth level.
+        BFS is often used for shortest path finding in unweighted graphs.
+
+# DFS
+    DFS (Depth-First Search)
+    WHAT :
+        DFS is a graph/tree traversal algorithm that explores as far as possible along each branch before backtracking.
+        DFS uses a stack or recursion to visit nodes, going deep into the tree as much as possible before exploring other branches.
+
+
 # post Order >
 # inOrder ^
 # preOrder /
@@ -107,16 +120,22 @@
 
 # Adjacency list 
 
-     The adjacency list is a common and efficient way to represent a graph in computer science. In this representation, each vertex (node) in the graph maintains a list of its adjacent vertices 
+    The adjacency list is a common and efficient way to represent a graph in computer science. In this representation, each vertex (node) in the graph maintains a list of its adjacent vertices.
 
 # Adjacency matrix
 
     An adjacency matrix is a 2D array or table used to represent a graph. Each element in the matrix indicates whether pairs of vertices are adjacent or not in the graph.
 
-# Cycle in a Graph 
+# Cycle in a Graph.
 
     A cycle in a graph is a path that starts and ends at the same vertex without traversing any edge more than once. In other words, a cycle occurs when there is a path where the first and last vertices are the same and there are no repeated edges or vertices (except for the starting/ending vertex).
 
-# isolated nodes
+# isolated nodes.
 
-    An isolated node (also called an isolated vertex) in a graph is a node that has no edges connecting it to any other nodes in the graph. In other words, an isolated node has zero degree, meaning it is not connected to any other node.
+    An isolated node (also called an isolated vertex) in a graph is a node that has no edges connecting it to any other nodes in the graph. In other words, an isolated node has zero degree, meaning it is not connected to any other node.'   
+
+# priority queue
+
+    A Priority Queue is a type of data structure that operates similar to a regular queue, but with an added feature: each element in a priority queue has a priority associated with it. The key difference is that in a priority queue, elements are dequeued based on their priority rather than the order they were added. This means elements with higher priority are served before elements with lower priority, regardless of when they were inserted into the queue.
+
+

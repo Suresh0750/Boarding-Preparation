@@ -25,7 +25,6 @@ class Graph{
         }
     }
     display(){
-        
         for(let vertex in this.adjacencyList){
             console.log(this.adjacencyList[vertex])
         }
