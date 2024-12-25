@@ -24,9 +24,10 @@ class Graph{
             this.adjacencyList[vertex2].push({ node: vertex1, weight });
         }
     }
-    display(){
-        for(let vertex in this.adjacencyList){
-            console.log(this.adjacencyList[vertex])
+    display(vertex){
+        if(!this.adjacencyList[vertex]) return []
+        for(let neighbour of this.adjacencyList[vertex]){
+            console.log(`Vertex->${neighbour.node} weight-> ${neighbour.weight}`)
         }
     }
 }
@@ -41,4 +42,4 @@ wG.addEdges('pranav','hunesh',6)
 wG.addEdges('hunesh','suresh',7)
 wG.addEdges('hunesh','pranav',8)
 wG.addEdges('suresh','pranav',9)
-wG.display()
+wG.display('hunesh')
