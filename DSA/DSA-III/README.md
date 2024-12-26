@@ -38,6 +38,12 @@
     Red-Black Tree
     Heap
 
+# General tree
+
+    A general tree is a tree data structure where each node can have any number of children. This flexibility makes general trees useful for representing hierarchical data, such as file systems
+    or
+    In the data structure, General tree is a tree in which each node can have either zero or many child nodes. It can not be empty. In general tree, there is no limitation on the degree of a node. The topmost node of a general tree is called the root node.
+
 # Binary tree
 
     A Binary Tree is a type of data structure that consists of nodes, where each node has at most two children, typically referred to as the left child and right child. It is a hierarchical structure, with one node called the root at the top, from which the rest of the tree branches out.
