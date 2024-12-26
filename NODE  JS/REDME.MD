@@ -642,3 +642,51 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
 # uri fragment 
 
     A URI fragment (also called a hash fragment) is the part of a Uniform Resource Identifier (URI) that comes after a # symbol. It is typically used to refer to a specific section or identifier within the resource that is being pointed to by the URI. The fragment itself is not sent to the server; instead, it is used by the client (such as a web browser) to navigate to a specific part of the resource, like a particular section of a webpage
+
+# Rest principles
+
+    Stateless
+    Client-Server Separation
+    Uniform Interface
+    Resource-Based
+    HTTP Methods
+    Layered System
+    Cacheability
+
+
+# What are design patterns ?
+
+     Factory Pattern
+     Observer Pattern
+     Middleware Pattern
+     Proxy Pattern.
+
+# What is redux ?
+
+    Redux is a popular state management library for JavaScript applications, especially when building React applications. It helps manage the state of an application in a predictable way by providing a centralized store for the application's state, ensuring that the state is immutable and can only be changed in a controlled manner.
+
+# reducer function
+
+    A reducer function is a core concept in Redux (and functional programming in general) used to manage how state in an application is updated in response to an action. It is a pure function that takes in two parameters:
+
+    Current state (often referred to as the "previous state").
+    Action (an object describing the change).
+
+# What is reduxtoolkit's slice ?
+
+    In Redux Toolkit, a slice is a set of reducer functions and actions that manage a specific piece of state in the Redux store. It is a powerful feature that simplifies the process of defining the Redux store's structure and logic for managing state.
+
+
+# slice  
+
+    A slice is a unit of state and the logic to manipulate that state, defined using createSlice in Redux Toolkit.
+
+# store 
+
+    The store is a centralized container for the whole state of your app, combining all the slices and dispatching actions.
+
+# What are the parts of JWT ?
+
+    Header
+    Payload
+    Signature
