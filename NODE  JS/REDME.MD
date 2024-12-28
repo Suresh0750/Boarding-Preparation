@@ -555,6 +555,12 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
  * cluster
  * dns
 
+# util module
+
+    The util module in Node.js provides a set of utility functions that help with various common tasks. These functions make it easier to perform common operations such as formatting, inspecting objects, and handling errors, among other things. The module is part of the core Node.js library, so you don't need to install anything to use it.
+
+
+
 # exprerss  
 
    Express is a node js web application framework that provides broad features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application. It's a layer built on the top of the Node js that helps manage servers and routes.   
@@ -690,3 +696,7 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
     Header
     Payload
     Signature
+# - app.all
+
+    app.all method is used to apply the same logic accross all method such as GET, POST, PUT, PATCH, DELECT in request which is made in our application.
+        
