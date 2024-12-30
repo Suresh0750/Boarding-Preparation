@@ -22,10 +22,22 @@
 //     }
 // })
 
+// const http = require('http')
+// const server = http.createServer((req,res)=>{
+//     console.log(req.url)
+//     res.writeHead(200,{'Content-Type':'text/plain'})
+//     res.write('hello world')
+//     res.write('hello world')
+//     res.end('hi')
+// })
+
+// server.listen(3000)
 
 // server.listen(3000,()=>{
 //     console.log('server running on http://localhost:3000')
 // })
+
+
 
 
 
@@ -53,11 +65,49 @@
 
 // const fs = require('fs')
 
+// let i = 0
+// let intervaId = setInterval(()=>{
+
+//     fs.appendFile('newText.txt',`${i++}`,(err)=>{
+//         if(err || i==10){
+//             console.log(err?.message)
+//             clearInterval(intervaId)
+//         }
+//     })
+// },1000)
+
 // fs.writeFile('read.txt','hello world',(err)=>{
 //     if(err){
 //         console.log(err.message)
 //     }
 // })
+
+// const fs = require('fs')
+
+// fs.unlink('newText.txt',(err)=>{
+//     if(err){
+//         console.log(err?.message)
+//     }
+// })
+
+// fs.readFile('read.txt','utf-8',(err,data)=>{
+//     if(err){
+//         console.log(err.message)
+//     }else{
+//         fs.writeFile('newText.txt',data,(err)=>{
+//             if(err){
+//                 console.log(err)
+//             }
+//         })
+//         fs.appendFile('newText.txt','data successfully append',(err)=>{
+//             if(err){
+//                 console.log('append is failure')
+//             }
+//         })
+//     }
+// })
+
+
 
 
 // fs.readFile('read.txt','utf-8',(err,data)=>{
@@ -94,6 +144,13 @@
 
 // const EventEmiter = require('events')
 
+// const fs = require('fs')
+
+// const readbleStream = fs.createReadStream('file.txt')
+// const writebleStream = fs.createWriteStream('write.txt')
+
+// readbleStream.pipe(writebleStream)
+
 
 // const eventEmiter = new EventEmiter()
 
@@ -106,8 +163,17 @@
 // eventEmiter.emit('greet','hello world')
 
 
-const Cluster = require('cluster')
+// const Cluster = require('cluster')
 
-const {fork} = Cluster;
+// const {fork} = Cluster;
 
-fork()
+// fork()
+
+// const EventEmitter = require('events')
+
+// const eventEmitter = new EventEmitter()
+
+// eventEmitter.emit('greet','hi madhav')
+// eventEmitter.on('greet',(data)=>{
+//     console.log(data)
+// })

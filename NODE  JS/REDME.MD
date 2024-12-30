@@ -434,12 +434,18 @@ Parallelism: Refers to executing tasks simultaneously, often using multiple core
 
 # req.params , req.query
 
- * req.params is an object that contains route parameters in the URL. These are placeholders in the route path that allow you to capture dynamic values in the URL.
- * req.query is an object that contains query parameters in the URL. Query parameters are the key-value pairs in the URL after the ? symbol.
-
+* Query Parameters and Path Parameters are two ways to pass information to the backend in a URL.
+* Query Parameters
+  * Query parameters are key-value pairs appended to the URL after a ?. Multiple parameters are joined using &.
+  * Used to filter, sort, or query data without changing the resource path
+  
+*  Path Parameters
+ * Path parameters are part of the URL path and are denoted by placeholders in the endpoint structure, such as :id.
+ * Used to identify a specific resource or entity.   
+  
         
 # events - emit, on
-
+    
  * emit triggers events and can pass data to listeners.
  * on listens for events and handles them when they are emitted.
 
@@ -559,8 +565,6 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
 
     The util module in Node.js provides a set of utility functions that help with various common tasks. These functions make it easier to perform common operations such as formatting, inspecting objects, and handling errors, among other things. The module is part of the core Node.js library, so you don't need to install anything to use it.
 
-
-
 # exprerss  
 
    Express is a node js web application framework that provides broad features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application. It's a layer built on the top of the Node js that helps manage servers and routes.   
@@ -667,29 +671,16 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
      Middleware Pattern
      Proxy Pattern.
 
-# What is redux ?
 
-    Redux is a popular state management library for JavaScript applications, especially when building React applications. It helps manage the state of an application in a predictable way by providing a centralized store for the application's state, ensuring that the state is immutable and can only be changed in a controlled manner.
+# parts of url
 
-# reducer function
-
-    A reducer function is a core concept in Redux (and functional programming in general) used to manage how state in an application is updated in response to an action. It is a pure function that takes in two parameters:
-
-    Current state (often referred to as the "previous state").
-    Action (an object describing the change).
-
-# What is reduxtoolkit's slice ?
-
-    In Redux Toolkit, a slice is a set of reducer functions and actions that manage a specific piece of state in the Redux store. It is a powerful feature that simplifies the process of defining the Redux store's structure and logic for managing state.
-
-
-# slice  
-
-    A slice is a unit of state and the logic to manipulate that state, defined using createSlice in Redux Toolkit.
-
-# store 
-
-    The store is a centralized container for the whole state of your app, combining all the slices and dispatching actions.
+    Protocol
+    Hostname
+    Port
+    Path
+    Query String
+    Fragment
+    Username/Password (optional)
 
 # What are the parts of JWT ?
 
@@ -699,4 +690,16 @@ It is a part of the microtask queue in Node.js and has a higher priority compare
 # - app.all
 
     app.all method is used to apply the same logic accross all method such as GET, POST, PUT, PATCH, DELECT in request which is made in our application.
-        
+    
+# exit codes
+
+     exit codes are used to indicate why a program stopped running (terminated). These codes are numeric values that a process sends back to the operating system (or parent process) when it ends.
+
+# reactor pattern
+
+    The Reactor Pattern is a design pattern primarily used for handling concurrent I/O operations efficiently in applications. It is the foundation for event-driven programming, especially in non-blocking environments like Node.js, and allows servers to handle multiple requests simultaneously without using a separate thread for each connection.
+
+    Reactor Pattern in Node.js
+    Node.js implements the Reactor Pattern internally using the libuv library. Here's how it works in the context of Node.js.
+
+
