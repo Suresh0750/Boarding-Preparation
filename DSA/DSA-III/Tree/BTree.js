@@ -315,7 +315,7 @@ class BinarySearchTree {
         };
         this.root = deleteNode(this.root, value);
     }
-    calculateHeight(node=this.node){
+    calculateHeight(node=this.root){
         if(!node) return -1
         let leftNode = this.calculateHeight(node.left)
         let rightNode = this.calculateHeight(node.right)

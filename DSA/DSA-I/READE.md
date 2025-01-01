@@ -24,6 +24,13 @@
 
     Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem. A recursive function solves a smaller instance of the same problem until it reaches a base case, where the function stops calling itself.
 
+# application of Recursion :
+
+    Mathematical Computations
+    Tree and Graph Traversals
+    Sorting Algorithms
+    Backtracking Problems
+    Divide and Conquer Algorithms
 
 # Drawbacks of recursion?
 
@@ -46,6 +53,14 @@
 # Dynamic memory allowcation.
 
     Dynamic memory allocation refers to the process of allocating memory at runtime rather than at compile time. It allows for more flexible memory management, as the exact amount of memory needed for a program isn't fixed when the program is written.
+
+
+# single Linked List application :
+    
+    Dynamic Memory Management
+    Implementation of Stack and Queue.
+    Hash Chaining
+    Representing Sparse Matrices
 
 # Application using Linked list
 
@@ -187,7 +202,7 @@
     Search for the next available slot in the array (e.g., linear probing, quadratic probing, or double hashing).
 
 
-# linear probing 
+# linear probing 4
 
     if the index is alrady occupied we move on the next index. That's called linear probing.
 

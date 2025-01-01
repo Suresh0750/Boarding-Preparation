@@ -59,7 +59,7 @@ class singleLinkedList{
             }
             return res.trim()
         }
-        return 'Linked list no node'
+        return 'Linked list no node'    
     }
     reverse(){
         if(this.head){

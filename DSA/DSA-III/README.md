@@ -144,4 +144,15 @@
 
     A Priority Queue is a type of data structure that operates similar to a regular queue, but with an added feature: each element in a priority queue has a priority associated with it. The key difference is that in a priority queue, elements are dequeued based on their priority rather than the order they were added. This means elements with higher priority are served before elements with lower priority, regardless of when they were inserted into the queue.
 
+# Spanning Tree
 
+    A spanning tree specifically refers to a tree that spans (connects) all the vertices in a graph. A graph can be any collection of nodes (vertices) and edges, not necessarily forming a tree itself. When you take any connected graph and choose a subset of its edges such that
+
+
+# Dijkstra's
+
+    Dijkstra's algorithm is a popular algorithm used to find the shortest path between nodes in a graph, which may represent, for example, road networks. It was created by computer scientist Edsger W. Dijkstra in 1956 and published three years later. The algorithm works on both directed and undirected graphs, but it only works with graphs that have non-negative edge weights.
+
+# prilisms algorithm
+
+    Prim's algorithm is a well-known algorithm used to find the minimum spanning tree (MST) of a graph. The MST is a subset of the edges in the graph that connects all the vertices together, without any cycles, and with the minimum possible total edge weight.

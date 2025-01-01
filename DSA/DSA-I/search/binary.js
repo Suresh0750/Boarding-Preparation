@@ -11,7 +11,7 @@
 
 
 const arr = [1, 2, 3, 4, 7, 9];
-const target = 1;
+const target = 9;
 
 
 function binary(arr,target){
@@ -34,19 +34,19 @@ function binary(arr,target){
 console.log(binary(arr,target))
 
 
-function recursiveBinarySerach(arr,target,low=0,high=arr.length-1){
-    if(low>high){
-        return -1
-    }
-    const mid = Math.floor((low+high)/2)
-    if(arr[mid]==target){
-        return mid
-    }else if(arr[mid]<target){
-        return recursiveBinarySerach(arr,target,mid+1,high)
-    }else{
-        return recursiveBinarySerach(arr,target,low,mid-1)
-    }
-}
+// function recursiveBinarySerach(arr,target,low=0,high=arr.length-1){
+//     if(low>high){
+//         return -1
+//     }
+//     const mid = Math.floor((low+high)/2)
+//     if(arr[mid]==target){
+//         return mid
+//     }else if(arr[mid]<target){
+//         return recursiveBinarySerach(arr,target,mid+1,high)
+//     }else{
+//         return recursiveBinarySerach(arr,target,low,mid-1)
+//     }
+// }
 
-console.log(recursiveBinarySerach(arr,7))
+// console.log(recursiveBinarySerach(arr,7))
 
