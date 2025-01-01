@@ -75,37 +75,88 @@ console.log('quick sort')
 
 
 
+// function quickSort(arr,low=0,high=arr.length-1){
+//     if(low<high){
+//         let pivIndex =  partition(arr,low,high)
+//         quickSort(arr,low,pivIndex-1)
+//         quickSort(arr,pivIndex+1,high)      
+//     }
+//     return arr
+// }
+// console.log(quickSort(arr))
 
-
-
-
-function quickSort(arr,low=0,high=arr.length-1){
-    if(low<high){
-        let pivIndex =  partition(arr,low,high)
-        quickSort(arr,low,pivIndex-1)
-        quickSort(arr,pivIndex+1,high)      
-    }
-    return arr
-}
-console.log(quickSort(arr))
-
-function partition(arr,low,high){
-    let pivod = arr[high]
-    let i = low-1
+// function partition(arr,low,high){
+//     let pivod = arr[high]
+//     let i = low-1
     
-    for(let j=low;j<high;j++){
-        if(arr[j]<=pivod){
-            i++
-            [arr[i],arr[j]] = [arr[j],arr[i]]
-        }
-    }
-    [arr[i+1],arr[high]]  = [arr[high],arr[i+1]]
+//     for(let j=low;j<high;j++){
+//         if(arr[j]<=pivod){
+//             i++
+//             [arr[i],arr[j]] = [arr[j],arr[i]]
+//         }
+//     }
+//     [arr[i+1],arr[high]]  = [arr[high],arr[i+1]]
     
-    return i+1
-}
+//     return i+1
+// }
 
 
-// Example usage:
-// let arr = [10, 7, 8, 9, 1, 5];
-quickSort(arr);
-console.log("Sorted array:", arr);
+// // Example usage:
+// // let arr = [10, 7, 8, 9, 1, 5];
+// quickSort(arr);
+// console.log("Sorted array:", arr);
+
+
+
+// * TOI
+
+// * with extra space
+
+
+
+    // * 01-01-25
+
+
+// function quickSort(arr){
+//     if(arr.length<2) return arr
+
+//     let left = []
+//     let right = []
+//     let playMid = arr.at(-1)
+//     for(let i=0;i<arr.length-1;i++){
+//         if(arr[i]<playMid){
+//             left.push(arr[i])
+//         }else{
+//             right.push(arr[i])
+//         }
+//     }
+//     return [...quickSort(left),playMid,...quickSort(right)]
+// }
+
+// console.log("Sorted array:", quickSort(arr));
+
+
+// * without extraspace
+// function quickSort(arr,low=0,high=arr.length-1){
+//     if(low>high) return arr
+
+//     let pivIndex = partition(arr,low,high)
+//      quickSort(arr,low,pivIndex-1)
+//      quickSort(arr,pivIndex+1,high)
+// }
+
+
+// function partition(arr,low,high){
+//     let pivot = arr[high]
+//     let i = low-1
+//     for(let j=low;j<high;j++){
+//         if(arr[j]<=pivot){
+//             i++
+//             [arr[i],arr[j]] = [arr[j],arr[i]]
+//         }
+//     }
+//     [arr[i+1],arr[high]] = [arr[high],arr[i+1]]
+//     return i+1
+// }
+// quickSort(arr)
+// console.log(arr)
