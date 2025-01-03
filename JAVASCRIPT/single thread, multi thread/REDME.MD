@@ -235,6 +235,7 @@ pure function, impure function :
  # promise
 
     A promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises provide a cleaner, more manageable way to handle asynchronous operations compared to traditional callback-based approaches.
+
     Promise used to avoid the inversion of control .  what is meaning of inversion of control means if we use callback hell, the each callback depending on completion of one before it, we can't trust because if the function call two time means what would happend for the we 
         can use promise . it call once. 
 
@@ -308,6 +309,11 @@ promise methods :
  # currying
 
     Currying in JavaScript transforms a function with multiple arguments into a nested series of functions, each taking a single argument. Currying helps you avoid passing the same variable multiple times, and it helps you create a higher order function.
+# application of currying?.
+
+   Code Reusability
+   Partial Application
+   Function Composition
 
  # optional chaining
     Optional chaining is a feature in JavaScript that allows you to safely access deeply nested properties of an object without having to explicitly check if each reference in the chain is null or undefined. This feature helps to avoid errors and makes the code cleaner and more readable.

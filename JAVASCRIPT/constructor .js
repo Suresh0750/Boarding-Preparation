@@ -1,7 +1,7 @@
 
 
 /* 
-    
+    cunstructor function is used to create an object with call the new key words. It is initialize the set of property to the object and it share the same prototype instance accross all object.
 */
 function constructorFun(name,age){
     this.name = name

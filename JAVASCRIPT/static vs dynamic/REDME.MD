@@ -1,0 +1,534 @@
+    
+How do you  detect primitive or non primitive value types in javascript?
+
+
+1) Number : Represents numeric values
+2) String : Represents textual data.
+3) Boolean : Represents true or false.
+4) Undefined : Represents an uninitialized variable or absence of a value.
+5) Null : Represents the intentional absence of any object value.
+6) Symbol : Represents a unique identifier.
+7) BigInt : Represent a number with arbitrary precision.
+
+Non-primitive values are objects, which include arrays, fruntions, and custom objects.
+
+how many data type is js ?  (9)
+primitive data type: 
+ Number, string, Boolean, Undefined,Null, BigInt,and Symbol
+
+Non primitive data type: (2 non primitve data types)
+object, arrays, functions
+
+8) object : Represent a collection of key and value pairs.
+9) Function : subtype of the object value that can be called funtions.
+
+
+what is identifier?
+
+ Identifier is a name of the variable. 
+ ex : let x = 10 // here x is the identifier
+
+what is variable ?
+  
+  The actual storage location identified by the identifier. ex: let, var , const
+
+scope : 
+
+   block scop : let and const is block scop.
+   var : function scope or global scop.
+
+JS key features :
+    
+    > Arrow function,
+    > Destructre,
+    > templeate literals,
+    > promise,
+    > Enhanced Object literals.  // example: if the object inside prperty we don't want to assign key with value has same value means :
+                    let name = 'value'
+                    let obj = {
+                        name,
+                        [age]   // we use [] this for mention the dynamic value 
+                    }
+
+Arrow fuctions : 
+    Arrow functions are concise to write a anonymous functions expression in javascript. They were indroduce in ECMAScript 6 and are especially useful for short, single-expression function.
+
+
+global execution contaxt
+
+    The global execution context is the default  or base execution context in Javascript. It is created when your Javascript code starts to run, and it governs the environment in which the code executes.
+
+    while hoisting time var will store global execution context but let and const store in Temporal Dead Zone (TDZ)
+
+'use strict' (Strict Mode)
+    
+    Strict Mode is feature that allows you to place a program, or function, in a strict operating context.
+
+Nan (not-a-number)
+
+    The Nan property in javascript represents a value that is "Not-a-number", indicating an illegal or undefined numeric value. 
+
+    console.log(typeof(NaN)) // * number
+
+Javascript statically typed or a dynamically typed language?
+    
+    Javascript is a dynamically typed language. in a dynamically typed language, variable types are determined at runtime, allowing a variable to hold values of any type without explicit type declarations. This flexibility can make coding more convenient but may also lead to runtime errors if types are not handled appropriately.
+
+what is Dom?
+
+    Dom stands for Document object Model, serving as a programming interface for web documents.
+    (or)
+    The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+
+what is BOM?
+
+    BOM is a programming interface extending beyond DOM, providing control over browser-related features.
+
+THIS : 
+    
+    In javascript, the this keyword is a special variable that is automatically defined in the scope of every function. Its value depends on how the function is invoked. The this keyword is used to refer to the object that is the current context of the function or, more simply, the object that the function is a method of.
+
+<!-- What is scope in Javascript?
+
+    in JavaScrit, the term "scope" refers to the context in which  -->
+
+Asynchronous and synchronous :
+
+Asynchronous is a non-blocking architecture, so the execution of one task isn't dependent on another. Tasks can run simultaneously. Synchronous is a blocking architecture, so the execution of each operation depends on completing the one before it. Each task requires an answer before moving on to the next iteration.
+
+diff between single thread and multi thread:
+
+    A Multi-threaded server can process multiple CPU-intensive tasks concurrently, whereas a single-threaded server can only handle one task at a time.
+
+let, const,var :
+
+    let and const are block scope. during the hoisting, variable declaration top of their scop but not initialized , we can't access the variable because of tempraory dead zone. try to access means we got referance error. let we can reinitialized the value but we con't redeclare. const we can't reinitialized we can't redeclare when the declaration we should assign the value in const.
+
+    var is global or function scop . during the hoisting, variable declaration go to top of their scop and initialized undifined, before accessing the variable we got undifind becuse of hoisting. we can redeclare and reinitialized the value.
+
+Hoisting :
+
+    Hoisting is the Javascript mechanisam;
+
+    In JavaScript, hoisting refers to the built-in behavior of the language through which declarations of functions, variables, and classes are moved to the top of their scope – all before code execution.
+
+closer :
+
+    A closure in JavaScript is a function that retains access to its lexical scope, even when that function is executed outside of its lexical scope. Closures are created whenever a function is defined within another function, allowing the inner function to access the variables and parameters of the outer function, even after the outer function has returned.
+
+    drowback : 
+        
+        Memory Consumption: Since closures retain references to their lexical scope, they can prevent variables from being garbage collected, leading to increased memory usage if not managed properly.
+
+        Complexity and Debugging: Closures can make the code more complex and harder to debug, especially with deeply nested functions and multiple layers of scope.
+
+    application :
+
+        Data encapsulation and privacy.
+        Maintain state
+
+TDZ :
+
+    The period between the entering of the block scope and the actual declaration of a let or const variable. 
+        or
+    The Temporal Dead Zone (TDZ) is a behavior in JavaScript that affects variables declared with let and const. It refers to the time period during which these variables are hoisted but not yet initialized, making them inaccessible until the declaration is encountered in the code.
+
+pure function, impure function :
+
+    Pure Function: Always produces the same output for the same input and has no side effects.
+
+    Impure Function: May produce different outputs for the same input and can have side effects that affect the external state.
+
+
+
+// # callback
+
+    In JavaScript, a callback is a function that is passed as an argument to another function and is executed after some operation has been completed. Callbacks are used to handle asynchronous operations such as reading files, making network requests, or responding to user events.
+
+// # Higher order function
+
+    function takes valuse as function in their parameter which is call higher order function
+    
+
+// # Generator function
+
+    A generator function in JavaScript is a special type of function that can pause its execution and later resume from where it paused. These functions are defined using the function* syntax and use the yield keyword to pause execution.
+
+// # factory function
+
+    A factory function in JavaScript is a function that creates and returns objects. It's a way to encapsulate the object creation process, allowing you to create multiple instances of an object without using the new keyword or defining a constructor function or class. Factory functions can also include logic to initialize the objects they create
+
+// # constructor function
+
+    A constructor function in JavaScript is a function used to create objects and initialize them with specific properties and methods. When called with the new keyword, a constructor function sets the properties of the newly created object and allows for custom initialization logic.
+
+// # IIFE (imidaiate invoked function)
+
+    An Immediately Invoked Function Expression (IIFE) is a function that is defined and executed immediately after its creation. It is often used to create a local scope to avoid polluting the global namespace, which can help prevent variable name conflicts in your code.
+
+// # regular function VS Arrow function 
+
+    regular function and Arrow function has some difference between syntax and usage . In side of object if we use regular function we can access the value form their lexical scop but Arrow function we can't do.
+
+// # Type casting
+
+    Type casting is the explicit conversion of a value from one type to another using built-in functions or methods. The developer explicitly specifies the desired type conversion.
+
+    Type Casting: Developer has full control over the conversion process.
+
+// # Type Coercion
+ 
+    Type coercion is the implicit conversion of a value from one type to another that occurs automatically in certain contexts, such as in expressions involving mixed types or during type comparisons. This is handled by JavaScript without explicit instructions from the developer.
+
+    Type Coercion: Conversion is handled automatically by JavaScript.
+
+
+// # AJAX
+
+    Ajax (Asynchronous JavaScript and XML) is a set of web development techniques that allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page without reloading the whole page.
+
+// # callback hell
+
+    Callback hell, also known as the "pyramid of doom," refers to the situation where multiple nested callbacks make the code difficult to read and maintain. This often happens in asynchronous programming when you have to perform several operations in sequence, each depending on the completion of the previous one.
+
+// # promise
+
+    A promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises provide a cleaner, more manageable way to handle asynchronous operations compared to traditional callback-based approaches.
+    Promise used to avoid the inversion of control .  what is meaning of inversion of control means if we use callback hell, the each callback depending on completion of one before it, we can't trust because if the function call two time means what would happend for the we 
+        can use promise . it call once. 
+
+
+    promise state:
+        pending,fullfiled,rejection
+
+promise methods :
+
+    // # promise.allSettled 
+
+        A promise.allSettled if the promise either failure or succese it will show the result with status code
+
+    // # promise.all
+
+        If all promise succese means it succese if any one of the promise failure means if it fails.
+
+    // # promise.any
+        
+        If will give resulte which is resolve.
+
+// # async and await 
+
+    Async/await provides a powerful way to write asynchronous code in a more synchronous fashion, improving readability, error handling, and overall code structure. It helps avoid callback hell and makes managing multiple asynchronous operations more straightforward.
+
+// # web API
+
+    A Web API is an application programming interface for the Web. A Browser API can extend the functionality of a web browser. A Server API can extend the functionality of a web server.
+    // * Here we use callback queue and event loop. 
+    
+// # shallow copy 
+
+    In JavaScript, a shallow copy is a copy of an object or an array where only the top-level structure is duplicated, while the nested structures are still referenced.
+
+// # deep copy
+
+    A deep copy is a copy that creates a new object with new memory locations for all of its properties and nested objects or arrays. It means that if you make changes to the copied object or any of its nested objects or arrays, it will not affect the original object.
+// # typesof
+
+    typesof use to identify the type
+
+// # isArray
+
+    it is check whethere the variable is Array or not.
+
+// # map loop
+
+    // map loop is used for iterating the array. it will interact each and every element and it will return new array
+
+// # filter
+
+    // filter is only we can use in an array and it is used to filter the value from the array
+
+// # reduce 
+    // reduce used for in array iterating and it will return a single value
+
+// # spread 
+    //Useful for copying and merging arrays or objects, and for spreading elements in function calls.
+
+// # rest operater
+    Useful in function parameters to handle a variable number of arguments, and in destructuring assignments to gather the remaining elements.
+
+// # passed by value
+
+    To pass the value when we call the function, if we change that value inside of the function it wo'n be affect the actual variable. beacause of it is primitive value
+
+// # passed by refference
+
+    To pass the value when we call the function, if we change that value inside of the function it will be affect the actual variable. beacause of it is non-primitive valuen example: array and object
+
+// # currying
+
+    Currying in JavaScript transforms a function with multiple arguments into a nested series of functions, each taking a single argument. Currying helps you avoid passing the same variable multiple times, and it helps you create a higher order function.
+
+// # optional chaining
+    Optional chaining is a feature in JavaScript that allows you to safely access deeply nested properties of an object without having to explicitly check if each reference in the chain is null or undefined. This feature helps to avoid errors and makes the code cleaner and more readable.
+
+// # Global execution context
+
+    Global execution context: This is the execution context for the global scope. It is created when the JavaScript engine starts up. Function execution context: This is the execution context for a function. It is created when the function is called
+
+
+// # Event loop
+    JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
+
+// # microtask
+
+    JavaScript is a single-threaded language, but using web API JavaScript can maintain its asynchronous function. When an asynchronous task comes to the call stack browser set it into the hashtag#webAPI and then when the task is ready for execution its placed into the call back queue or microtask queue. Finally,
+     when hashtag#callStack is empty event loop first checks the microtask queue. If there have any task events loop take those over the call-back queue. After finishing all microtask the hashtag#eventLoop starts executing the callback queue's task. Event loop gives priority microtask queue over call back queue. Now the question is how/why JavaScript decides which task should place into the microtask queue and which into the hashtag#callback queue. In JavaScript, the task scheduling algorithm determines which tasks go into the microtask queue and which tasks go into the callback queue. The microtask queue is used for tasks that need to be executed as soon as possible, such as promise resolutions and mutations to the DOM. The callback queue is used for tasks that can be executed at a later time, such as click events and timers
+
+// # Nullish operator
+
+    The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+
+// # Bitwise operator
+    JavaScript converts numbers to 32 bits signed integers.
+    After the bitwise operation is performed, the result is converted back to 64 bits JavaScript numbers.
+
+// # class or object   
+
+    Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are unique to classes. 
+
+// # constructor
+
+    A constructor is a special function that creates and initializes an object instance of a class. In JavaScript, a constructor gets called when an object is created using the new keyword. The purpose of a constructor is to create a new object and set values for any existing object properties.
+
+// # object declaration
+    It has many wase to create an object. 
+    Using constructor  function
+    Using factory object
+    Object.create()
+    Object.assign({},obj)
+
+
+// # append, appendChild
+
+    It is used to append the Node, 
+
+    // * appendChild
+        appendChild adds a single node as a child to the parent node.
+    // * append 
+        append can append multiple nodes and strings, and is more flexible than appendChild.
+
+// # addEventListener
+    In JavaScript, event listeners allow you to execute a function when a specific event occurs on an element. This is useful for creating interactive web pages. The most common way to add an event listener is by using the addEventListener method.
+
+// # querySelector and querySelector all    
+    The querySelector and querySelectorAll methods in JavaScript are powerful tools for selecting elements from the DOM using CSS selectors. These methods allow you to easily and flexibly select elements based on their classes, IDs, attributes, and more.
+
+// # Dom Events 
+    DOM events in JavaScript are actions or occurrences that happen in the browser, like a user clicking a button, a webpage loading, or a form being submitted. JavaScript can be used to listen for these events and execute code in response.
+    example : 
+        click
+        dbClick,
+        mouseover,
+        mouseup,
+        mouseDown,
+
+// # Event pubbling
+
+    If we call the child it will triger their parant it called event pubbling for example we have 3 nested div with event if I call the child after completing that event that parant will call. The event trigger upto the dom hierarchy
+
+// # Event capturing
+
+    it is opposite event pubbling if I call the child the parant event first triger and work and that the child will work.
+    Event capturing another name of event trickling 
+
+// # Event propagetion 
+
+    The event pubbling and capturing is happen beacause of this event propgetion, the event is propaget parent or child. should prevent that we can use event.stopPropagation()
+
+// # Event delegation   
+    Event delegation is a technique in JavaScript where we delegate the responsibility of handling an event to a parent element. 
+
+    // * if we click the child the event is triger the parent that is event bubbling so that event we delegate or give a responsibility or work do somthing is call event delegation.  // * for understanding
+
+// # Array method
+    // Array.from()  // * IS working like split method
+    // Array.isArray() // * Check whether array is or not
+    // Array.of()     // * Array.of(1,2,3,4,5) // * output [1,2,3,4,5]
+    // Array.push(9)    // * push the value to array
+    // Array.pop()      // * pop the value from the array
+    // Array.shif()     // * remove the value infront of the array
+    // Array.unshift()  // * push the value from infront of the array
+    // Array.splice()   // * it is used for deleting and inserting the value to array. it has three parameter (denoting where its start,delete count, add the value)
+    // Array.concat()   // * concat the value or merging two array and merging two string
+
+    // Array.forEach()  // * using for iterating the array with each element it won't return 
+    // Array.map()      // * using for iterating the array with each element it will return new Array
+    // Array.filter     // * using for filter the array based on giving the condition
+
+    // Array.reduce(acc,curr,ind)     // * Execute the each element from that array ans it will return a single value
+    // Array.reduceRight(acc,curr,ind)  // * reduce and reduceRight work like same but reduceRight work from reverse side
+    // Array.find()                     // * it using like find the count
+    // Array.indexOf()                // * find index of the value from that array
+    // Array.lastIndexOf(val)         // * find index value , last from the array
+
+    // Array.includes(val)             // * It is used to use the value is there or not and it will return the boolean value
+    // Array.sort((a,b)=> a-b)         // * it is used to sort the array assending and dessending order
+    // Array.reverse()                  // * using for reverse the array
+    // Array.join(',,_,.,=')            // * using for join the value from array and we can mention which value want to present intermidiate
+    // Array.slice()                    // * usign for slice the value
+
+
+// # string methods
+    
+    // str.length
+    // str.charAt(0)                    // this for indentify the value keep the index
+    // str.charCodeAt(0)                // This is for using find the ASCII value of the character
+    // str.concat(//give an str)        // concat the string or merge two string
+    // str.includes('word')             // This is for  find that value is there or not it will give boolean value
+    // str.indexOf('word')              // find the index number
+    // str.lastIndexOf('word')          // find the last index of the value
+
+// # this keyword
+
+    In JavaScript, the 'this' keyword refers to the object that is currently executing or calling the function. It is a way to access and manipulate the properties and methods of the object that called the function.
+
+// # call, apply, bind
+    // # call
+    // using call method we can borrow the function from function or inside of the object function
+    // * apply
+    // apply and call usage both are same but has some different, when call the function we should pass the value should be array format
+    // * bind
+    // bind syntex like call and apply, but we can assign to another variable and we can access the function using with variable
+
+// # use strict
+
+    // * use strict using the javascript strict mode
+
+// # NaN (not an number)
+
+    // * is check whether the value is number or not and it will return boolean value
+
+// # ES6 features
+
+    let,const
+    Arrow function,
+    default parameter,
+    map,reduce, filter,
+    templeate literals and etc.
+
+// # legal shadowing and illegal 
+
+    Now, while shadowing a variable, it should not cross the boundary of the scope, i.e. we can shadow var variable by let variable but cannot do the opposite. So, if we try to shadow let variable by var variable, it is known as Illegal Shadowing and it will give the error as “variable is already defined.”
+
+// # JSON.stringfy()
+
+    it will convert the value entirly string even that quetation or , {},[] everything is convert to the string
+
+// # JSON.parse()
+
+    // it use for after converting the string we need to convert value for using purpose we can use this JSON.parse()
+
+// # conditional operator
+    // conditional operator is also called by ternary operater and syntex( true ? work : work;)  it will work based on that condition
+
+// # prototypes and prototype chain
+    // Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+
+
+// # Object.seal
+
+    // # using Object.seal we can't add property and we can't delete property but we can modified
+
+// # Object.freeze 
+    // usign Object.freeze we can't add,delete,modified properties
+
+// # Proxy Object
+    A Proxy object in JavaScript is used to define custom behavior for fundamental operations (e.g., property lookup, assignment, enumeration, function invocation, etc.). It allows you to create an object that intercepts and customizes operations performed on.
+
+// # map and set 
+
+    Maps, which are ordered collections of key/value pairs, and Sets, which are collections of unique values.
+
+// # weekSet 
+    
+    weekSet is the collection of object,similar to Set, but with a few key differences. if you delete the object the corbage will collect that.
+
+// # weekMap
+
+    WeakMap: Useful for associating metadata with objects, such as caching results or storing private data for objects, without risking memory leaks.
+
+// # null pointer exception
+
+    whenever we try to access the null or undefined value of variable we encountered this error null pointer exception. Most of the case in nested object
+
+// # ternary operator
+
+    ternary operator is the conditional operater it's work like if and else (condition ? work what we want to the condition is satisfied : write what we want to the condition is not satisfied)
+
+// # polyfiles 
+
+    Polyfills are pieces of code that provide modern functionality to older browsers that lack native support for those features. They bridge the gap between the JavaScript language features and APIs that are available in modern browsers and the limited capabilities of older browser versions.
+
+// # jagged array
+
+    jagged array is also called ragged array . if the nested array dosn't have same length that called jagged array.
+
+
+// # Concurrency 
+
+    Concurrency is about dealing with multiple tasks at the same time but not necessarily executing them simultaneously. It involves managing multiple tasks that make progress within overlapping time periods.
+
+// # Parallelism
+
+    Parallelism involves executing multiple tasks simultaneously, typically using multiple processors or cores. In JavaScript, parallelism can be achieved using Web Workers or Worker Threads.
+
+// # Regular expression
+    What is JavaScript RegExs? A JavaScript RegEx is a sequence of characters that forms a search pattern.
+
+
+// # Object.defineProperty()
+    This is used for defined the property it has three parameter first we should mention Object name , second property name, then we should define that property, in third parameter has four property configurable which is used
+        for allow to access that property and it value boolean, second property we should mention value, here we can mention that value, thired ennumerable, this also is boolean type which is used for it that value show or not, writable used allow to edit
+        that property.
+
+
+// # Event flow in js
+
+    Event Flow is the sequence or order in which the particular web page receives the event.
+
+// # design pattern
+
+    JavaScript design patterns are reusable code blocks or sequences that solve common web development problems and challenges.
+
+    In Js three desing pattern is there
+        creational,structural ,behavioral
+
+// # debuggin error
+
+    Debugging in JavaScript refers to the process of identifying and fixing errors or bugs in code.
+
+// # Boolean coercion
+
+    Type Coercion refers to the process of automatic or implicit conversion of values from one data type to another. 
+
+// # Named parameter
+    Named parameters allow functions to be called using parameter names, which can make the code more readable and can help avoid errors, especially when dealing with functions that take many parameters
+
+
+// # Symbol
+
+    Symbol using for create unique value over the Symbol data type we can use same value deferent valus 
+    ex :
+    let x = Symbol('key')
+    let y = Symbol('key')
+
+    console.log(x==y)  // false
+
+// # jit
+
+
+JIT stands for Just-In-Time compilation. It's a runtime optimization technique used in programming languages and environments to improve the execution speed of programs.
+
+
+JIT is used to for our javascript code convert to the machine code at runtiome . 
+ 
