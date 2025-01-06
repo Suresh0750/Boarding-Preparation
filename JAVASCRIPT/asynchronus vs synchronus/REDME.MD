@@ -5,3 +5,6 @@ As its base JavaScript language is synchronous. Synchronous means the code runs 
 Synchronous and Asynchronous 👍
 
 Asynchronous is a non-blocking architecture, so the execution of one task isn't dependent on another. Tasks can run simultaneously. Synchronous is a blocking architecture, so the execution of each operation depends on completing the one before it. Each task requires an answer before moving on to the next iteration.
+
+
+
