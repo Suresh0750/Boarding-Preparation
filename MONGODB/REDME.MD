@@ -78,7 +78,7 @@ db.collection.update({},{$rename:{oldName:"rename"}})
 
     Horizontal scaling means adding more machines (servers) to handle increasing loads of data and requests. It distributes the workload across multiple servers instead of relying on one single powerful server.
 
-# Vertical scalin
+# Vertical scaling
 
     Vertical scaling, also known as "scaling up," refers to increasing the capacity of a single server or system to handle more load. Instead of adding more machines, you enhance the existing server by adding more CPU, RAM, storage, or other resources to improve performance.
 
